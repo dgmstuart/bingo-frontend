@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(document.documentElement).toHaveTextContent("Wedge formation");
+  expect(document.documentElement).toHaveTextContent("Circle formation");
 });
