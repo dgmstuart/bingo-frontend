@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import wordList from './wordList.json'
+import shuffle from './lib/shuffle'
 
 function App() {
-  var words: string[] = wordList.slice(0, 25)
+  var words: string[] = shuffle(wordList).slice(0, 25)
 
   const Words: React.FC<{ words: string[] }> = ({ words }) => {
     return(
