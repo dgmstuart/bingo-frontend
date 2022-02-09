@@ -53,3 +53,6 @@
   vertical-align: middle;
   overflow-wrap: break-word;
 }
+.Cell.stamped {
+  background-color: lightblue;
+}

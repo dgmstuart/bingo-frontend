@@ -1,4 +1,5 @@
 import React from 'react';
+import Cell from './Cell'
 
 const Words: React.FC<{ words: string[] }> = ({ words }) => {
   return(
@@ -24,10 +25,6 @@ const Row: React.FC<{ words: string[] }> = ({ words }) => {
       }
     </tr>
   )
-}
-
-const Cell: React.FC<{ word: string }> = ({ word }) => {
-  return(<td className="Cell">{word}</td>)
 }
 
 export default Words;
