@@ -1,7 +1,9 @@
 import React from 'react';
 import Cell from './Cell'
 
-const Words: React.FC<{ words: string[] }> = ({ words }) => {
+type WordList = string[]
+
+const Words: React.FC<{ words: WordList }> = ({ words }) => {
   return(
     <table className="Words">
       <tbody>
@@ -15,7 +17,7 @@ const Words: React.FC<{ words: string[] }> = ({ words }) => {
   )
 }
 
-const Row: React.FC<{ words: string[] }> = ({ words }) => {
+const Row: React.FC<{ words: WordList }> = ({ words }) => {
   return(
     <tr className="Row">
       {
@@ -28,3 +30,4 @@ const Row: React.FC<{ words: string[] }> = ({ words }) => {
 }
 
 export default Words;
+export type { WordList }

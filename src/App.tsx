@@ -3,9 +3,10 @@ import './App.css';
 import wordList from './wordList.json'
 import shuffle from './lib/shuffle'
 import Words from './components/Words'
+import type { WordList } from './components/Words'
 
 function App() {
-  var words: string[] = shuffle(wordList).slice(0, 25)
+  var words: WordList = shuffle(wordList).slice(0, 25)
 
   return (
     <div className="App">
