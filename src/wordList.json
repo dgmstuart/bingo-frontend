@@ -1,60 +1,62 @@
 [
-  "Wedge formation",
   "Circle formation",
-  "A jam circle",
+  "Wedge formation",
   "Square formation or Diamond formation",
   "A single line facing the audience",
+  "A jam circle",
 
   "The Pancake (aerial)",
-  "Leapfrog ('Hoppa bock')",
   "The Snatch (aerial)",
-  "The Lindy flip/ Lamppost/ Around the back (aerial)",
-  "An aerial involving more than two people",
+  "Lindy flip/ Lamppost/ Around the back (aerial)",
   "Fly toss/ Popover/ Coochie toss (aerial)",
   "Waterfall (aerial)",
   "Knickerbocker/ Baby flip (aerial)",
-  "Kaye flip (Aerial)",
+  "Kaye flip (aerial)",
+  "Leapfrog (Hoppa bock)",
+  "An aerial involving more than two people",
   "An aerial involving a cartwheel",
 
-  "Mixed-nationality team",
-  "All-Swedish Team",
-  "A Lithuanian not in Lithuania",
-  "An Swede not in Sweden",
-  "Somebody you have personally taken class from",
-
-  "16 or more people on stage",
-  "An odd number of people on stage",
-
-  "Shorty George",
-  "Shimmy",
-  "Itches",
-  "Pecking",
-
   "The Chase",
-  "A Minnie Dip",
+  "A Minne Dip",
   "Hacksaws",
   "Tandem Charleston/ Back Charleston",
   "Sailor Kicks",
   "Drags",
   "A really big kick",
 
+  "Shorty George",
+  "Shimmy",
+  "Itches",
+  "Pecking",
+
+  "3 swingouts and a circle",
+  "More than 4 swingouts in a row",
+  "Swingouts in opposite directions",
+
+  "Changing partners",
+  "A canon (kanon)",
+  "Slow motion",
+  "Mime or ”Acting”",
+  "Syncopated clapping",
+
   "Everyone jumps at the same time",
   "Everyone shouts at the same time",
   "Everyone freezes in a pose (mid-routine)",
-
-  "Swingouts in opposite directions",
-  "3 swingouts and a Circle",
-  "More than 4 swingouts in a row",
-  "Changing partners",
-  "A canon (Kanon)",
-  "Slow motion",
-  "Syncopated clapping",
 
   "Somebody is upside-down",
   "Somebody is on the floor",
   "Somebody’s hand touches the ground",
   "Standing on shoulders",
   "Sitting on shoulders",
+
+  "Mixed-nationality team",
+  "All-Swedish Team",
+  "A Swede not in Sweden",
+  "A Lithuanian not in Lithuania",
+  "Somebody you have personally taken class from",
+
+  "16 or more people on stage",
+  "An odd number of people on stage",
 
   "A leader in white trainers",
   "Braces (suspenders)",
@@ -64,6 +66,5 @@
   "A metallic item of clothing",
   "Everyone is wearing the same colour (not black or white)",
 
-  "Mime or ”Acting”",
   "Mid-routine song change"
 ]
