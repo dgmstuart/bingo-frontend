@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
 const Cell: React.FC<{ word: string }> = ({ word }) => {
@@ -12,6 +12,10 @@ const Cell: React.FC<{ word: string }> = ({ word }) => {
     "Cell",
     { "stamped": isStamped }
   )
+
+  useEffect(() => {
+    setStamped(false)
+  }, [word])
 
   return(
     <td

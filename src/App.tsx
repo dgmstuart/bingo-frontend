@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import wordList from './wordList.json'
 import Session from './lib/Session'
@@ -16,12 +16,19 @@ function App() {
     return list
   }
 
-  var words: WordList = session.words || newWords()
+  const [words, setWords] = useState<WordList>(session.words || newWords())
+
+  const setNewWords = function(): void {
+    setWords(newWords())
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Team Lindy Bingo</h1>
+        <div className="App-actions">
+          <button onClick={setNewWords}>New card</button>
+        </div>
       </header>
 
       <Words words={words}/>

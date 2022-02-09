@@ -23,8 +23,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-actions {
+  margin-bottom: 15px;
+}
+
+.App-actions button {
+  padding: 0.5rem 1rem;
+  line-height: 1.15;
+  font-weight: bold;
+  color: white;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  background-color: transparent;
 }
 
 @keyframes App-logo-spin {
