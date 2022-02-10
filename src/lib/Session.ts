@@ -1,19 +1,19 @@
-import type { WordList } from '../App'
+import type { CellData } from '../App'
 
 class Session {
   store = window.localStorage;
 
-  get words(): WordList | null {
-    var wordsString: string | null = this.store.getItem("words")
-    if (wordsString) {
-      return JSON.parse(wordsString)
+  get cellDataList(): CellData[] | null {
+    var cellDataString: string | null = this.store.getItem("cellDataList")
+    if (cellDataString) {
+      return JSON.parse(cellDataString)
     } else {
       return null
     }
   }
 
-  setWords(words: WordList): void {
-    this.store.setItem("words", JSON.stringify(words))
+  setCellDataList(cellDataList: CellData[]) {
+    this.store.setItem("cellDataList", JSON.stringify(cellDataList))
   }
 }
 

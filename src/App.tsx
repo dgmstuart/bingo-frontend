@@ -5,30 +5,37 @@ import Session from './lib/Session'
 import shuffle from './lib/shuffle'
 import Grid from './components/Grid'
 
-export type WordList = string[]
-type CellData = { word: string, stamped: boolean }
+type WordList = string[]
+export type CellData = { word: string, stamped: boolean }
 export type CellProps = { word: string, stamped: boolean, setStamped: (stamped: boolean) => void }
 
 function App() {
   const session = new Session()
 
   const newWords = function(): WordList {
-    const list = shuffle(wordList).slice(0, 25);
-    session.setWords(list)
+    return shuffle(wordList).slice(0, 25);
+  }
+
+  const newCellDataList = function(): CellData[] {
+    return newWords().map(word => { return { word: word, stamped: false }})
+  }
+
+  const initCellDataList = function(): CellData[] {
+    const list = newCellDataList()
+    session.setCellDataList(list)
 
     return list
   }
 
-  const words: WordList = session.words || newWords()
+  const [cellDataList, setCellDataList] = useState<CellData[]>(session.cellDataList || initCellDataList())
 
-  const newCellDataList = function(words: WordList): CellData[] {
-    return words.map(word => { return { word: word, stamped: false }})
+  const setAndSaveCellDataList = function(list: CellData[]): void {
+    session.setCellDataList(list)
+    setCellDataList(list)
   }
 
-  const [cellDataList, setCellDataList] = useState<CellData[]>(newCellDataList(words))
-
   const setStamped = function(index: number, stamped: boolean): void {
-    setCellDataList(
+    setAndSaveCellDataList(
       cellDataList.map((cellData, cellDataIndex) => {
         if (index === cellDataIndex) {
           return { ...cellData, stamped: stamped }
@@ -48,11 +55,11 @@ function App() {
   const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => { return { ...cellData, setStamped: setStampedForIndex(index) } })
 
   const setNewWords = function(): void {
-    setCellDataList(newCellDataList(newWords()))
+    setAndSaveCellDataList(newCellDataList())
   }
 
   const clearAllCells = function(): void {
-    setCellDataList(
+    setAndSaveCellDataList(
       cellDataList.map((cellData) => {
         return { ...cellData, stamped: false }
       })

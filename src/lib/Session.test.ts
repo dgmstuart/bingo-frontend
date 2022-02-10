@@ -4,16 +4,22 @@ beforeEach(() => {
   window.localStorage.clear();
 });
 
-test("stores an array of words in the session", () => {
+test("stores an array of cell data in the session", () => {
   const session = new Session()
 
-  session.setWords(["Aardvark", "Budgie"])
+  session.setCellDataList([
+    { word: "Aardvark", stamped: false },
+    { word: "Budgie", stamped: true}
+  ])
 
-  expect(session.words).toEqual(["Aardvark", "Budgie"])
+  expect(session.cellDataList).toEqual([
+    { word: "Aardvark", stamped: false },
+    { word: "Budgie", stamped: true}
+  ])
 });
 
 test("returns null if nothing is stored", () => {
   const session = new Session()
 
-  expect(session.words).toEqual(null)
+  expect(session.cellDataList).toEqual(null)
 });
