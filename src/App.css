@@ -18,6 +18,7 @@
 
 .App-actions button {
   padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   line-height: 1.15;
   font-weight: bold;
   color: white;

@@ -51,12 +51,21 @@ function App() {
     setCellDataList(newCellDataList(newWords()))
   }
 
+  const clearAllCells = function(): void {
+    setCellDataList(
+      cellDataList.map((cellData) => {
+        return { ...cellData, stamped: false }
+      })
+    )
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Team Lindy Bingo</h1>
         <div className="App-actions">
           <button onClick={setNewWords}>New card</button>
+          <button onClick={clearAllCells}>Clear</button>
         </div>
       </header>
 
