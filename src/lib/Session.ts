@@ -1,4 +1,4 @@
-import type { WordList } from '../components/Words'
+import type { WordList } from '../App'
 
 class Session {
   store = window.localStorage;

@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import classNames from 'classnames';
+import { CellProps } from '../App'
 
-const Cell: React.FC<{ word: string }> = ({ word }) => {
-  const [isStamped, setStamped] = useState(false);
-
+const Cell: React.FC<CellProps> = ({ word, stamped, setStamped}) => {
   const toggleStamped = () => {
-    setStamped(!isStamped)
+    setStamped(!stamped)
   };
 
   var classes = classNames(
     "Cell",
-    { "stamped": isStamped }
+    { "stamped": stamped }
   )
-
-  useEffect(() => {
-    setStamped(false)
-  }, [word])
 
   return(
     <td

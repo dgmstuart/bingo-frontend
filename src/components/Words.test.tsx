@@ -2,36 +2,38 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Words from './Words';
 
-var words = [
-  "Aardvark",
-  "Albatross",
-  "Alligator",
-  "Alpaca",
-  "Anole",
-  "Ant",
-  "Anteater",
-  "Antelope",
-  "Ape",
-  "Armadillo",
-  "Ass",
-  "Baboon",
-  "Badger",
-  "Barracuda",
-  "Bat",
-  "Bear",
-  "Beaver",
-  "Bee",
-  "Binturong",
-  "Bird",
-  "Bison",
-  "Bluebird",
-  "Boar",
-  "Bobcat",
-  "Budgie",
+
+const setStamped = function(stamped: boolean) {}
+const cellPropsList = [
+  { word: "Aardvark", stamped: false, setStamped: setStamped },
+  { word: "Albatross", stamped: false, setStamped: setStamped },
+  { word: "Alligator", stamped: false, setStamped: setStamped },
+  { word: "Alpaca", stamped: false, setStamped: setStamped },
+  { word: "Anole", stamped: false, setStamped: setStamped },
+  { word: "Ant", stamped: false, setStamped: setStamped },
+  { word: "Anteater", stamped: false, setStamped: setStamped },
+  { word: "Antelope", stamped: false, setStamped: setStamped },
+  { word: "Ape", stamped: false, setStamped: setStamped },
+  { word: "Armadillo", stamped: false, setStamped: setStamped },
+  { word: "Ass", stamped: false, setStamped: setStamped },
+  { word: "Baboon", stamped: false, setStamped: setStamped },
+  { word: "Badger", stamped: false, setStamped: setStamped },
+  { word: "Barracuda", stamped: false, setStamped: setStamped },
+  { word: "Bat", stamped: false, setStamped: setStamped },
+  { word: "Bear", stamped: false, setStamped: setStamped },
+  { word: "Beaver", stamped: false, setStamped: setStamped },
+  { word: "Bee", stamped: false, setStamped: setStamped },
+  { word: "Binturong", stamped: false, setStamped: setStamped },
+  { word: "Bird", stamped: false, setStamped: setStamped },
+  { word: "Bison", stamped: false, setStamped: setStamped },
+  { word: "Bluebird", stamped: false, setStamped: setStamped },
+  { word: "Boar", stamped: false, setStamped: setStamped },
+  { word: "Bobcat", stamped: false, setStamped: setStamped },
+  { word: "Budgie", stamped: false, setStamped: setStamped },
 ]
 
 test('displays the words in a grid', () => {
-  render(<Words words={words}/>);
+  render(<Words cellPropsList={cellPropsList}/>);
 
   var rows = screen.queryAllByRole("row");
   var row1 = rows[0];

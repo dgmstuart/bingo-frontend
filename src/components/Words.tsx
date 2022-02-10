@@ -1,28 +1,27 @@
 import React from 'react';
 import Cell from './Cell'
+import { CellProps } from '../App'
 
-type WordList = string[]
-
-const Words: React.FC<{ words: WordList }> = ({ words }) => {
+const Words: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return(
     <table className="Words">
       <tbody>
-        <Row words={words.slice(0,5)}/>
-        <Row words={words.slice(5,10)}/>
-        <Row words={words.slice(10,15)}/>
-        <Row words={words.slice(15,20)}/>
-        <Row words={words.slice(20,25)}/>
+        <Row cellPropsList={cellPropsList.slice(0,5)}/>
+        <Row cellPropsList={cellPropsList.slice(5,10)}/>
+        <Row cellPropsList={cellPropsList.slice(10,15)}/>
+        <Row cellPropsList={cellPropsList.slice(15,20)}/>
+        <Row cellPropsList={cellPropsList.slice(20,25)}/>
       </tbody>
     </table>
   )
 }
 
-const Row: React.FC<{ words: WordList }> = ({ words }) => {
+const Row: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return(
     <tr className="Row">
       {
-        words.map((word, index)=>
-          <Cell key={index} word={word}/>
+        cellPropsList.map(({ word, stamped, setStamped }, index)=>
+          <Cell key={index} word={word} stamped={stamped} setStamped={setStamped}/>
         )
       }
     </tr>
@@ -30,4 +29,3 @@ const Row: React.FC<{ words: WordList }> = ({ words }) => {
 }
 
 export default Words;
-export type { WordList }
