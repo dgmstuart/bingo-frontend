@@ -3,7 +3,7 @@ import './App.css';
 import wordList from './wordList.json'
 import Session from './lib/Session'
 import shuffle from './lib/shuffle'
-import Words from './components/Words'
+import Grid from './components/Grid'
 
 export type WordList = string[]
 type CellData = { word: string, stamped: boolean }
@@ -60,7 +60,7 @@ function App() {
         </div>
       </header>
 
-      <Words cellPropsList={cellPropsList}/>
+      <Grid cellPropsList={cellPropsList}/>
     </div>
   );
 }

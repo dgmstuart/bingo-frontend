@@ -48,16 +48,6 @@
   }
 }
 
-.Words {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-.Row {
-  height: 80px;
-}
-
 .Cell {
   font-size: calc(2vw + 4px);
   padding: calc(2vmin - 4px);

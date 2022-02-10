@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Words from './Words';
+import Grid from './Grid';
 
 
 const setStamped = function(stamped: boolean) {}
@@ -33,7 +33,7 @@ const cellPropsList = [
 ]
 
 test('displays the words in a grid', () => {
-  render(<Words cellPropsList={cellPropsList}/>);
+  render(<Grid cellPropsList={cellPropsList}/>);
 
   var rows = screen.queryAllByRole("row");
   var row1 = rows[0];

@@ -1,10 +1,11 @@
 import React from 'react';
+import './Grid.css'
 import Cell from './Cell'
 import { CellProps } from '../App'
 
-const Words: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
+const Grid: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return(
-    <table className="Words">
+    <table className="Grid">
       <tbody>
         <Row cellPropsList={cellPropsList.slice(0,5)}/>
         <Row cellPropsList={cellPropsList.slice(5,10)}/>
@@ -28,4 +29,4 @@ const Row: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   )
 }
 
-export default Words;
+export default Grid;
