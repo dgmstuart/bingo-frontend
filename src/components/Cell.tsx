@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cell.css'
 import classNames from 'classnames';
 import { CellProps } from '../App'
 

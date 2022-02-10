@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -37,24 +26,4 @@
   border-style: solid;
   border-radius: 0.25rem;
   background-color: transparent;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.Cell {
-  font-size: calc(2vw + 4px);
-  padding: calc(2vmin - 4px);
-  border: 1px solid;
-  vertical-align: middle;
-  overflow-wrap: break-word;
-}
-.Cell.stamped {
-  background-color: lightblue;
 }

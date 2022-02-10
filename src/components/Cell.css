@@ -1,0 +1,11 @@
+.Cell {
+  font-size: calc(2vw + 4px);
+  padding: calc(2vmin - 4px);
+  border: 1px solid;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+.Cell.stamped {
+  background-color: lightblue;
+}
