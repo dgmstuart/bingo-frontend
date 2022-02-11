@@ -1,0 +1,9 @@
+.Grid {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.Row {
+  height: 80px;
+}

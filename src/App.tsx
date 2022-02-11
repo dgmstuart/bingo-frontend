@@ -1,25 +1,57 @@
 import React, { useState } from 'react';
 import './App.css';
-import wordList from './wordList.json'
-import Session from './lib/Session'
-import shuffle from './lib/shuffle'
-import Words from './components/Words'
-import type { WordList } from './components/Words'
+import Grid from './components/Grid'
+import GuaranteedJsonSession from './lib/GuaranteedJsonSession'
+import { newWords } from './lib/words'
+
+export type CellData = { word: string, stamped: boolean }
+
+export type CellProps = CellData & { setStamped: (stamped: boolean) => void }
 
 function App() {
-  const session = new Session()
-
-  const newWords = function(): WordList {
-    const list = shuffle(wordList).slice(0, 25);
-    session.setWords(list)
-
-    return list
+  const newCellDataList = function(): CellData[] {
+    return newWords().map(word => { return { word: word, stamped: false }})
   }
 
-  const [words, setWords] = useState<WordList>(session.words || newWords())
+  const session = new GuaranteedJsonSession<CellData[]>(newCellDataList)
+
+  const [cellDataList, setCellDataList] = useState<CellData[]>(session.sessionData)
+
+  const setAndSaveCellDataList = function(list: CellData[]): void {
+    session.sessionData = list
+    setCellDataList(list)
+  }
+
+  const setStamped = function(index: number, stamped: boolean): void {
+    setAndSaveCellDataList(
+      cellDataList.map((cellData, cellDataIndex) => {
+        if (index === cellDataIndex) {
+          return { ...cellData, stamped: stamped }
+        } else {
+          return cellData
+        }
+      })
+    )
+  }
+
+  const setStampedForIndex = function(index: number): (stamped: boolean) => void {
+    return function(stamped: boolean) {
+      setStamped(index, stamped)
+    }
+  }
+
+  const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => { return { ...cellData, setStamped: setStampedForIndex(index) } })
 
   const setNewWords = function(): void {
-    setWords(newWords())
+    setAndSaveCellDataList(newCellDataList())
+  }
+
+  const clearAllCells = function(): void {
+    setAndSaveCellDataList(
+      cellDataList.map((cellData) => {
+        return { ...cellData, stamped: false }
+      })
+    )
   }
 
   return (
@@ -28,10 +60,11 @@ function App() {
         <h1>Team Lindy Bingo</h1>
         <div className="App-actions">
           <button onClick={setNewWords}>New card</button>
+          <button onClick={clearAllCells}>Clear</button>
         </div>
       </header>
 
-      <Words words={words}/>
+      <Grid cellPropsList={cellPropsList}/>
     </div>
   );
 }

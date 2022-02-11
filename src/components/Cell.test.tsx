@@ -1,25 +1,31 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Cell from './Cell';
 
-test("toggles stamped when clicked", () => {
+test("shows as stamped if stamped", () => {
   render(
     <table>
       <tbody>
         <tr>
-          <Cell word="Budgie"/>
+          <Cell word="Budgie" stamped={true} setStamped={(stamped) => {}}/>
         </tr>
       </tbody>
     </table>
   )
 
-  expect(screen.getByText("Budgie")).not.toHaveClass("stamped")
-
-  fireEvent.click(screen.getByText("Budgie"))
-
   expect(screen.getByText("Budgie")).toHaveClass("stamped")
+});
 
-  fireEvent.click(screen.getByText("Budgie"))
+test("shows as not stamped if not stamped", () => {
+  render(
+    <table>
+      <tbody>
+        <tr>
+          <Cell word="Budgie" stamped={false} setStamped={(stamped) => {}}/>
+        </tr>
+      </tbody>
+    </table>
+  )
 
   expect(screen.getByText("Budgie")).not.toHaveClass("stamped")
 });

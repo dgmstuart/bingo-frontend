@@ -30,3 +30,23 @@ describe("'New card' button", () => {
     expect(firstCell).not.toHaveClass("stamped")
   });
 });
+
+describe("'Clear' button", () => {
+  test("clears any stamped cells", () => {
+    render(<App/>)
+    const cells = screen.queryAllByRole("cell")
+    const firstCell = cells[0]
+    const lastCell = cells[24]
+
+    fireEvent.click(firstCell)
+    fireEvent.click(lastCell)
+
+    expect(firstCell).toHaveClass("stamped")
+    expect(lastCell).toHaveClass("stamped")
+
+    fireEvent.click(screen.getByText("Clear"))
+
+    expect(firstCell).not.toHaveClass("stamped")
+    expect(lastCell).not.toHaveClass("stamped")
+  });
+});
