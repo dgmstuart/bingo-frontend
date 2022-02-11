@@ -21,8 +21,8 @@ const Row: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return(
     <tr className="Row">
       {
-        cellPropsList.map(({ word, stamped, setStamped }, index)=>
-          <Cell key={index} word={word} stamped={stamped} setStamped={setStamped}/>
+        cellPropsList.map(({ word, stamped, setStamped })=>
+          <Cell key={word} word={word} stamped={stamped} setStamped={setStamped}/>
         )
       }
     </tr>
