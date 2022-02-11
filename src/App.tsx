@@ -1,36 +1,24 @@
 import React, { useState } from 'react';
 import './App.css';
-import wordList from './wordList.json'
-import Session from './lib/Session'
-import shuffle from './lib/shuffle'
 import Grid from './components/Grid'
+import GuaranteedJsonSession from './lib/GuaranteedJsonSession'
+import { newWords } from './lib/words'
 
-type WordList = string[]
 export type CellData = { word: string, stamped: boolean }
-export type CellProps = { word: string, stamped: boolean, setStamped: (stamped: boolean) => void }
+
+export type CellProps = CellData & { setStamped: (stamped: boolean) => void }
 
 function App() {
-  const session = new Session()
-
-  const newWords = function(): WordList {
-    return shuffle(wordList).slice(0, 25);
-  }
-
   const newCellDataList = function(): CellData[] {
     return newWords().map(word => { return { word: word, stamped: false }})
   }
 
-  const initCellDataList = function(): CellData[] {
-    const list = newCellDataList()
-    session.setCellDataList(list)
+  const session = new GuaranteedJsonSession<CellData[]>(newCellDataList)
 
-    return list
-  }
-
-  const [cellDataList, setCellDataList] = useState<CellData[]>(session.cellDataList || initCellDataList())
+  const [cellDataList, setCellDataList] = useState<CellData[]>(session.sessionData)
 
   const setAndSaveCellDataList = function(list: CellData[]): void {
-    session.setCellDataList(list)
+    session.sessionData = list
     setCellDataList(list)
   }
 
