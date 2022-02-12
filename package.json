@@ -27,9 +27,19 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
+    "plugins": [
+      "import",
+      "testing-library"
+    ],
     "extends": [
+      "eslint:recommended",
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:import/typescript",
+      "plugin:react-hooks/recommended",
+      "plugin:testing-library/react"
     ]
   },
   "browserslist": {
