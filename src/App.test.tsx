@@ -19,15 +19,15 @@ describe("'New card' button", () => {
   test("clears any stamped cells", () => {
     render(<App/>)
     const cells = screen.queryAllByRole("cell")
-    const firstCell = cells[0]
 
-    fireEvent.click(firstCell)
+    fireEvent.click(cells[0])
 
-    expect(firstCell).toHaveClass("stamped")
+    expect(cells[0]).toHaveClass("stamped")
 
     fireEvent.click(screen.getByText("New card"))
 
-    expect(firstCell).not.toHaveClass("stamped")
+    const updatedCells = screen.queryAllByRole("cell")
+    expect(updatedCells[0]).not.toHaveClass("stamped")
   });
 });
 
