@@ -5,7 +5,7 @@ import { CellProps } from '../App'
 
 const Grid: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return(
-    <table className="Grid">
+    <table className="Grid" role="grid">
       <tbody>
         <Row cellPropsList={cellPropsList.slice(0,5)}/>
         <Row cellPropsList={cellPropsList.slice(5,10)}/>

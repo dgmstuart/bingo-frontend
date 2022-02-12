@@ -15,6 +15,7 @@ const Cell: React.FC<CellProps> = ({ word, stamped, setStamped}) => {
 
   return(
     <td
+      role="gridcell"
       className={classes}
       onClick={toggleStamped}
     >

@@ -5,20 +5,20 @@ import App from './App';
 describe("'New card' button", () => {
   test("changes the words on the card", () => {
     render(<App/>)
-    const initialCells = screen.queryAllByRole("cell")
+    const initialCells = screen.queryAllByRole("gridcell")
     const firstWord = initialCells[0].textContent
     const secondWord = initialCells[1].textContent
 
     fireEvent.click(screen.getByText("New card"))
 
-    const updatedCells = screen.queryAllByRole("cell")
+    const updatedCells = screen.queryAllByRole("gridcell")
     expect(updatedCells[0].textContent).not.toEqual(firstWord)
     expect(updatedCells[1].textContent).not.toEqual(secondWord)
   });
 
   test("clears any stamped cells", () => {
     render(<App/>)
-    const cells = screen.queryAllByRole("cell")
+    const cells = screen.queryAllByRole("gridcell")
 
     fireEvent.click(cells[0])
 
@@ -26,7 +26,7 @@ describe("'New card' button", () => {
 
     fireEvent.click(screen.getByText("New card"))
 
-    const updatedCells = screen.queryAllByRole("cell")
+    const updatedCells = screen.queryAllByRole("gridcell")
     expect(updatedCells[0]).not.toHaveClass("stamped")
   });
 });
@@ -34,7 +34,7 @@ describe("'New card' button", () => {
 describe("'Clear' button", () => {
   test("clears any stamped cells", () => {
     render(<App/>)
-    const cells = screen.queryAllByRole("cell")
+    const cells = screen.queryAllByRole("gridcell")
     const firstCell = cells[0]
     const lastCell = cells[24]
 
