@@ -1,21 +1,21 @@
 class JsonSession<T> {
   store = window.localStorage;
-  keyName = "sessionData"
+  keyName = "sessionData";
 
   get sessionData(): T | null {
-    var sessionDataString: string | null = this.store.getItem(this.keyName)
+    var sessionDataString: string | null = this.store.getItem(this.keyName);
     if (sessionDataString) {
-      return JSON.parse(sessionDataString)
+      return JSON.parse(sessionDataString);
     } else {
-      return null
+      return null;
     }
   }
 
   set sessionData(sessionData: T | null) {
     if (sessionData) {
-      this.store.setItem(this.keyName, JSON.stringify(sessionData))
+      this.store.setItem(this.keyName, JSON.stringify(sessionData));
     } else {
-      this.store.removeItem(this.keyName)
+      this.store.removeItem(this.keyName);
     }
   }
 }

@@ -1,9 +1,8 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Grid from './Grid';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import Grid from "./Grid";
 
-
-const setStamped = function(stamped: boolean) {}
+const setStamped = function (stamped: boolean) {};
 const cellPropsList = [
   { word: "Aardvark", stamped: false, setStamped: setStamped },
   { word: "Albatross", stamped: false, setStamped: setStamped },
@@ -30,10 +29,10 @@ const cellPropsList = [
   { word: "Boar", stamped: false, setStamped: setStamped },
   { word: "Bobcat", stamped: false, setStamped: setStamped },
   { word: "Budgie", stamped: false, setStamped: setStamped },
-]
+];
 
-test('displays the words in a grid', () => {
-  render(<Grid cellPropsList={cellPropsList}/>);
+test("displays the words in a grid", () => {
+  render(<Grid cellPropsList={cellPropsList} />);
 
   var rows = screen.queryAllByRole("row");
   var row1 = rows[0];
