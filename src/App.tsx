@@ -3,6 +3,7 @@ import "./App.css";
 import Grid from "./components/Grid";
 import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
 import { newWords } from "./lib/words";
+import stripIndent from "strip-indent";
 
 export type CellData = { word: string; stamped: boolean };
 
@@ -16,7 +17,6 @@ function App() {
   };
 
   const session = new GuaranteedJsonSession<CellData[]>(newCellDataList);
-
   const [cellDataList, setCellDataList] = useState<CellData[]>(
     session.sessionData
   );
@@ -62,6 +62,19 @@ function App() {
     );
   };
 
+  const copyBoardToClipboard = function (): void {
+    const emojiList = cellDataList.map((cellData) => {
+      return cellData.stamped ? "🟦" : "⬜";
+    });
+    const emojiGrid = `
+      ${emojiList.slice(0, 5).join("")}
+      ${emojiList.slice(5, 10).join("")}
+      ${emojiList.slice(10, 15).join("")}
+      ${emojiList.slice(15, 20).join("")}
+      ${emojiList.slice(20, 25).join("")}`;
+    window.navigator.clipboard.writeText(stripIndent(emojiGrid).trim());
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -69,6 +82,7 @@ function App() {
         <div className="App-actions">
           <button onClick={setNewWords}>New card</button>
           <button onClick={clearAllCells}>Clear</button>
+          <button onClick={copyBoardToClipboard}>Share</button>
         </div>
       </header>
 
