@@ -1,5 +1,5 @@
 import type { CellData } from "../App";
-import { chunk } from "lodash";
+import chunk from "lodash/chunk";
 
 const emojiGrid = function (cellDataList: CellData[]): string {
   const emojiList = cellDataList.map(({ stamped }) => {
