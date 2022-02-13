@@ -2,16 +2,17 @@ import React from "react";
 import "./Grid.css";
 import Cell from "./Cell";
 import { CellProps } from "../App";
+import { chunk } from "lodash";
 
 const Grid: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
+  const chunked = chunk(cellPropsList, 5);
+
   return (
     <table className="Grid" role="grid">
       <tbody>
-        <Row cellPropsList={cellPropsList.slice(0, 5)} />
-        <Row cellPropsList={cellPropsList.slice(5, 10)} />
-        <Row cellPropsList={cellPropsList.slice(10, 15)} />
-        <Row cellPropsList={cellPropsList.slice(15, 20)} />
-        <Row cellPropsList={cellPropsList.slice(20, 25)} />
+        {chunked.map((row, index) => (
+          <Row cellPropsList={row} key={index} />
+        ))}
       </tbody>
     </table>
   );

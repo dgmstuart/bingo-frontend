@@ -4,6 +4,7 @@ import ActionButton from "./components/ActionButton";
 import Grid from "./components/Grid";
 import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
 import { newWords } from "./lib/words";
+import { chunk } from "lodash";
 import stripIndent from "strip-indent";
 
 export type CellData = { word: string; stamped: boolean };
@@ -67,12 +68,9 @@ function App() {
     const emojiList = cellDataList.map((cellData) => {
       return cellData.stamped ? "🟦" : "⬜";
     });
-    const emojiGrid = `
-      ${emojiList.slice(0, 5).join("")}
-      ${emojiList.slice(5, 10).join("")}
-      ${emojiList.slice(10, 15).join("")}
-      ${emojiList.slice(15, 20).join("")}
-      ${emojiList.slice(20, 25).join("")}`;
+
+    const emojiRows = chunk(emojiList, 5).map((row) => row.join(""));
+    const emojiGrid = emojiRows.join("\n");
     window.navigator.clipboard.writeText(stripIndent(emojiGrid).trim());
   };
 
