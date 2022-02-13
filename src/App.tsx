@@ -7,8 +7,7 @@ import { newWords } from "./lib/words";
 import emojiGrid from "./lib/emojiGrid";
 
 export type CellData = { word: string; stamped: boolean };
-
-export type CellProps = CellData & { setStamped: (stamped: boolean) => void };
+export type CellProps = CellData & { toggleStamped: () => void };
 
 function App() {
   const newCellDataList = function (): CellData[] {
@@ -39,16 +38,20 @@ function App() {
     );
   };
 
-  const setStampedForIndex = function (
-    index: number
-  ): (stamped: boolean) => void {
-    return function (stamped: boolean) {
-      setStamped(index, stamped);
+  const toggleStampedForIndex = function (
+    index: number,
+    stamped: boolean
+  ): () => void {
+    return function () {
+      setStamped(index, !stamped);
     };
   };
 
   const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => {
-    return { ...cellData, setStamped: setStampedForIndex(index) };
+    return {
+      ...cellData,
+      toggleStamped: toggleStampedForIndex(index, cellData.stamped),
+    };
   });
 
   const setNewWords = function (): void {

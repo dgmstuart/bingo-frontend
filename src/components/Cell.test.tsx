@@ -7,7 +7,7 @@ test("shows as stamped if stamped", () => {
     <table>
       <tbody>
         <tr>
-          <Cell word="Budgie" stamped={true} setStamped={(stamped) => {}} />
+          <Cell word="Budgie" stamped={true} toggleStamped={() => {}} />
         </tr>
       </tbody>
     </table>
@@ -21,7 +21,7 @@ test("shows as not stamped if not stamped", () => {
     <table>
       <tbody>
         <tr>
-          <Cell word="Budgie" stamped={false} setStamped={(stamped) => {}} />
+          <Cell word="Budgie" stamped={false} toggleStamped={() => {}} />
         </tr>
       </tbody>
     </table>

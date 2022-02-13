@@ -3,11 +3,7 @@ import "./Cell.css";
 import classNames from "classnames";
 import { CellProps } from "../App";
 
-const Cell: React.FC<CellProps> = ({ word, stamped, setStamped }) => {
-  const toggleStamped = () => {
-    setStamped(!stamped);
-  };
-
+const Cell: React.FC<CellProps> = ({ word, stamped, toggleStamped }) => {
   var classes = classNames("Cell", { stamped: stamped });
 
   return (

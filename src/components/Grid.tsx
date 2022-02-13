@@ -21,12 +21,12 @@ const Grid: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
 const Row: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
   return (
     <tr className="Row">
-      {cellPropsList.map(({ word, stamped, setStamped }) => (
+      {cellPropsList.map(({ word, stamped, toggleStamped }) => (
         <Cell
           key={word}
           word={word}
           stamped={stamped}
-          setStamped={setStamped}
+          toggleStamped={toggleStamped}
         />
       ))}
     </tr>
