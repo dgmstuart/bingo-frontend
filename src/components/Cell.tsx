@@ -6,9 +6,15 @@ import { CellProps } from "../App";
 const Cell: React.FC<CellProps> = ({ word, stamped, toggleStamped }) => {
   var classes = classNames("Cell", { stamped: stamped });
 
+  const htmlSoftHyphen = "&shy;";
+  const unicodeSoftHyphen = "\u00ad";
+  const normalise = function (string: string): string {
+    return string.replace(new RegExp(htmlSoftHyphen, "g"), unicodeSoftHyphen);
+  };
+
   return (
     <td role="gridcell" className={classes} onClick={toggleStamped}>
-      {word}
+      {normalise(word)}
     </td>
   );
 };

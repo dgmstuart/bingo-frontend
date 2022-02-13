@@ -17,7 +17,7 @@ const cellPropsList = [
   { word: "Ass", stamped: false, toggleStamped: toggleStamped },
   { word: "Baboon", stamped: false, toggleStamped: toggleStamped },
   { word: "Badger", stamped: false, toggleStamped: toggleStamped },
-  { word: "Barracuda", stamped: false, toggleStamped: toggleStamped },
+  { word: "Ba&shy;rra&shy;cuda", stamped: false, toggleStamped: toggleStamped },
   { word: "Bat", stamped: false, toggleStamped: toggleStamped },
   { word: "Bear", stamped: false, toggleStamped: toggleStamped },
   { word: "Beaver", stamped: false, toggleStamped: toggleStamped },
@@ -51,7 +51,7 @@ test("displays the words in a grid", () => {
   expect(row3).toHaveTextContent("Ass");
   expect(row3).toHaveTextContent("Baboon");
   expect(row3).toHaveTextContent("Badger");
-  expect(row3).toHaveTextContent("Barracuda");
+  expect(row3).toHaveTextContent("Ba\u00adrra\u00adcuda");
   expect(row3).toHaveTextContent("Bat");
   var row4 = rows[3];
   expect(row4).toHaveTextContent("Bear");
