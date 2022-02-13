@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Check types
-        run: npx tsc --project tsconfig.json
+        run: npm run typecheck
 
   tests:
     runs-on: ubuntu-latest

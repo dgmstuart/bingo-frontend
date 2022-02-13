@@ -23,6 +23,7 @@
     "test": "react-scripts test",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write .",
+    "typecheck": "tsc --project tsconfig.json",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
