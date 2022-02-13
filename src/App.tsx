@@ -1,5 +1,6 @@
-import React, { useState, MouseEvent } from "react";
+import React, { useState } from "react";
 import "./App.css";
+import ActionButton from "./components/ActionButton";
 import Grid from "./components/Grid";
 import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
 import { newWords } from "./lib/words";
@@ -50,23 +51,19 @@ function App() {
     return { ...cellData, setStamped: setStampedForIndex(index) };
   });
 
-  const setNewWords = function (event: MouseEvent<HTMLButtonElement>): void {
+  const setNewWords = function (): void {
     setAndSaveCellDataList(newCellDataList());
-    buttonActive(event.target as HTMLButtonElement, 100);
   };
 
-  const clearAllCells = function (event: MouseEvent<HTMLButtonElement>): void {
+  const clearAllCells = function (): void {
     setAndSaveCellDataList(
       cellDataList.map((cellData) => {
         return { ...cellData, stamped: false };
       })
     );
-    buttonActive(event.target as HTMLButtonElement, 100);
   };
 
-  const copyBoardToClipboard = function (
-    event: MouseEvent<HTMLButtonElement>
-  ): void {
+  const copyBoardToClipboard = function (): void {
     const emojiList = cellDataList.map((cellData) => {
       return cellData.stamped ? "🟦" : "⬜";
     });
@@ -77,40 +74,6 @@ function App() {
       ${emojiList.slice(15, 20).join("")}
       ${emojiList.slice(20, 25).join("")}`;
     window.navigator.clipboard.writeText(stripIndent(emojiGrid).trim());
-    buttonActive(event.target as HTMLButtonElement, 1000, "Copied");
-  };
-
-  const setStyles = function (element: HTMLElement, styles: Object) {
-    Object.assign(element.style, styles);
-  };
-
-  const buttonActive = function (
-    element: HTMLButtonElement,
-    duration: number,
-    text?: string
-  ) {
-    const {
-      innerText,
-      style: { color, backgroundColor },
-    } = element;
-
-    setTimeout(() => {
-      setStyles(element, {
-        color: color,
-        backgroundColor: backgroundColor,
-      });
-      element.innerText = innerText;
-      element.disabled = false;
-    }, duration);
-
-    element.disabled = true;
-    setStyles(element, {
-      color: "#282c34",
-      backgroundColor: "white",
-    });
-    if (text) {
-      element.innerText = text;
-    }
   };
 
   return (
@@ -118,9 +81,22 @@ function App() {
       <header className="App-header">
         <h1>Team Lindy Bingo</h1>
         <div className="App-actions">
-          <button onClick={setNewWords}>New card</button>
-          <button onClick={clearAllCells}>Clear</button>
-          <button onClick={copyBoardToClipboard}>Share</button>
+          <ActionButton
+            text="New card"
+            onClick={setNewWords}
+            activeDuration={100}
+          />
+          <ActionButton
+            text="Clear"
+            onClick={clearAllCells}
+            activeDuration={100}
+          />
+          <ActionButton
+            text="Share"
+            changeText="Copied"
+            onClick={copyBoardToClipboard}
+            activeDuration={1500}
+          />
         </div>
       </header>
 
