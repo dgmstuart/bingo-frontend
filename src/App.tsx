@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, MouseEvent } from "react";
 import "./App.css";
 import Grid from "./components/Grid";
 import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
@@ -50,19 +50,23 @@ function App() {
     return { ...cellData, setStamped: setStampedForIndex(index) };
   });
 
-  const setNewWords = function (): void {
+  const setNewWords = function (event: MouseEvent<HTMLButtonElement>): void {
     setAndSaveCellDataList(newCellDataList());
+    buttonActive(event.target as HTMLButtonElement, 100);
   };
 
-  const clearAllCells = function (): void {
+  const clearAllCells = function (event: MouseEvent<HTMLButtonElement>): void {
     setAndSaveCellDataList(
       cellDataList.map((cellData) => {
         return { ...cellData, stamped: false };
       })
     );
+    buttonActive(event.target as HTMLButtonElement, 100);
   };
 
-  const copyBoardToClipboard = function (): void {
+  const copyBoardToClipboard = function (
+    event: MouseEvent<HTMLButtonElement>
+  ): void {
     const emojiList = cellDataList.map((cellData) => {
       return cellData.stamped ? "🟦" : "⬜";
     });
@@ -73,6 +77,40 @@ function App() {
       ${emojiList.slice(15, 20).join("")}
       ${emojiList.slice(20, 25).join("")}`;
     window.navigator.clipboard.writeText(stripIndent(emojiGrid).trim());
+    buttonActive(event.target as HTMLButtonElement, 1000, "Copied");
+  };
+
+  const setStyles = function (element: HTMLElement, styles: Object) {
+    Object.assign(element.style, styles);
+  };
+
+  const buttonActive = function (
+    element: HTMLButtonElement,
+    duration: number,
+    text?: string
+  ) {
+    const {
+      innerText,
+      style: { color, backgroundColor },
+    } = element;
+
+    setTimeout(() => {
+      setStyles(element, {
+        color: color,
+        backgroundColor: backgroundColor,
+      });
+      element.innerText = innerText;
+      element.disabled = false;
+    }, duration);
+
+    element.disabled = true;
+    setStyles(element, {
+      color: "#282c34",
+      backgroundColor: "white",
+    });
+    if (text) {
+      element.innerText = text;
+    }
   };
 
   return (
