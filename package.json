@@ -59,7 +59,11 @@
       "plugin:react-hooks/recommended",
       "plugin:jsx-a11y/recommended",
       "plugin:testing-library/react"
-    ]
+    ],
+    "rules": {
+       "no-var": "error",
+       "prefer-const": "error"
+    }
   },
   "browserslist": {
     "production": [

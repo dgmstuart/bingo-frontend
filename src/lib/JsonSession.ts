@@ -3,7 +3,7 @@ class JsonSession<T> {
   keyName = "sessionData";
 
   get sessionData(): T | null {
-    var sessionDataString: string | null = this.store.getItem(this.keyName);
+    const sessionDataString: string | null = this.store.getItem(this.keyName);
     if (sessionDataString) {
       return JSON.parse(sessionDataString);
     } else {
