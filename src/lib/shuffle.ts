@@ -1,7 +1,9 @@
 // Implementation of the Fisher-Yates (aka Knuth) Shuffle
 // Lifted from https://stackoverflow.com/a/2450976
 
-const shuffle = (array: any[]) => {
+type ArrayTransformation = <T>(array: T[]) => T[];
+
+const shuffle: ArrayTransformation = (array) => {
   let currentIndex = array.length,
     randomIndex;
 
