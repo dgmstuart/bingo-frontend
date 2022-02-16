@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { MouseEvent } from "react";
 import "./App.css";
 import ActionButton from "./components/ActionButton";
 import Grid from "./components/Grid";
@@ -6,8 +7,11 @@ import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
 import { newWords } from "./lib/words";
 import emojiGrid from "./lib/emojiGrid";
 
+type ClickHandler<T> = (event: MouseEvent<T>) => void;
+type CellClickHandler = ClickHandler<HTMLTableDataCellElement>;
+export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
 export type CellData = { word: string; stamped: boolean };
-export type CellProps = CellData & { toggleStamped: () => void };
+export type CellProps = CellData & { toggleStamped: CellClickHandler };
 
 const App = () => {
   const newCellDataList = function (): CellData[] {
@@ -41,7 +45,7 @@ const App = () => {
   const toggleStampedForIndex = function (
     index: number,
     stamped: boolean
-  ): () => void {
+  ): CellClickHandler {
     return () => {
       setStamped(index, !stamped);
     };
@@ -52,17 +56,17 @@ const App = () => {
     toggleStamped: toggleStampedForIndex(index, cellData.stamped),
   }));
 
-  const setNewWords = (): void => {
+  const setNewWords: ButtonClickHandler = () => {
     setAndSaveCellDataList(newCellDataList());
   };
 
-  const clearAllCells = (): void => {
+  const clearAllCells: ButtonClickHandler = () => {
     setAndSaveCellDataList(
       cellDataList.map((cellData) => ({ ...cellData, stamped: false }))
     );
   };
 
-  const copyBoardToClipboard = (): void => {
+  const copyBoardToClipboard: ButtonClickHandler = () => {
     window.navigator.clipboard.writeText(emojiGrid(cellDataList));
   };
 

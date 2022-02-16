@@ -1,14 +1,13 @@
-import React, { MouseEvent } from "react";
-
-type ClickHandler = (event: MouseEvent<HTMLButtonElement>) => void;
+import React from "react";
+import type { ButtonClickHandler } from "../App";
 
 const ActionButton: React.FC<{
   text: string;
   changeText?: string;
-  onClick: ClickHandler;
+  onClick: ButtonClickHandler;
   activeDuration: number;
 }> = ({ text, changeText, onClick, activeDuration }) => {
-  const clickHandler: ClickHandler = (event) => {
+  const clickHandler: ButtonClickHandler = (event) => {
     const target = event.target as HTMLButtonElement;
     target.disabled = true;
     onClick(event);
