@@ -8,14 +8,12 @@ const ActionButton: React.FC<{
   onClick: ClickHandler;
   activeDuration: number;
 }> = ({ text, changeText, onClick, activeDuration }) => {
-  const clickHandler = function (): ClickHandler {
-    return (event: MouseEvent<HTMLButtonElement>) => {
-      const target = event.target as HTMLButtonElement;
-      target.disabled = true;
-      onClick(event);
-      buttonActive(target);
-      target.disabled = false;
-    };
+  const clickHandler: ClickHandler = (event) => {
+    const target = event.target as HTMLButtonElement;
+    target.disabled = true;
+    onClick(event);
+    buttonActive(target);
+    target.disabled = false;
   };
 
   const setStyles = function (element: HTMLElement, styles: Object) {
@@ -45,7 +43,7 @@ const ActionButton: React.FC<{
     }
   };
 
-  return <button onClick={clickHandler()}>{text}</button>;
+  return <button onClick={clickHandler}>{text}</button>;
 };
 
 export default ActionButton;
