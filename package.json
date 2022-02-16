@@ -62,7 +62,8 @@
     ],
     "rules": {
        "no-var": "error",
-       "prefer-const": "error"
+       "prefer-const": "error",
+       "func-style": ["error", "expression"]
     }
   },
   "browserslist": {

@@ -1,7 +1,7 @@
 // Implementation of the Fisher-Yates (aka Knuth) Shuffle
 // Lifted from https://stackoverflow.com/a/2450976
 
-function shuffle(array: any[]) {
+const shuffle = (array: any[]) => {
   let currentIndex = array.length,
     randomIndex;
 
@@ -19,6 +19,6 @@ function shuffle(array: any[]) {
   }
 
   return array;
-}
+};
 
 export default shuffle;

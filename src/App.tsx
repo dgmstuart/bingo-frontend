@@ -9,7 +9,7 @@ import emojiGrid from "./lib/emojiGrid";
 export type CellData = { word: string; stamped: boolean };
 export type CellProps = CellData & { toggleStamped: () => void };
 
-function App() {
+const App = () => {
   const newCellDataList = function (): CellData[] {
     return newWords().map((word) => {
       return { word: word, stamped: false };
@@ -97,6 +97,6 @@ function App() {
       <Grid cellPropsList={cellPropsList} />
     </div>
   );
-}
+};
 
 export default App;
