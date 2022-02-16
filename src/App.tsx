@@ -21,12 +21,12 @@ const App = () => {
     session.sessionData
   );
 
-  const setAndSaveCellDataList = function (list: CellData[]): void {
+  const setAndSaveCellDataList = (list: CellData[]): void => {
     session.sessionData = list;
     setCellDataList(list);
   };
 
-  const setStamped = function (index: number, stamped: boolean): void {
+  const setStamped = (index: number, stamped: boolean): void => {
     setAndSaveCellDataList(
       cellDataList.map((cellData, cellDataIndex) => {
         if (index === cellDataIndex) {
@@ -42,31 +42,27 @@ const App = () => {
     index: number,
     stamped: boolean
   ): () => void {
-    return function () {
+    return () => {
       setStamped(index, !stamped);
     };
   };
 
-  const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => {
-    return {
-      ...cellData,
-      toggleStamped: toggleStampedForIndex(index, cellData.stamped),
-    };
-  });
+  const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => ({
+    ...cellData,
+    toggleStamped: toggleStampedForIndex(index, cellData.stamped),
+  }));
 
-  const setNewWords = function (): void {
+  const setNewWords = (): void => {
     setAndSaveCellDataList(newCellDataList());
   };
 
-  const clearAllCells = function (): void {
+  const clearAllCells = (): void => {
     setAndSaveCellDataList(
-      cellDataList.map((cellData) => {
-        return { ...cellData, stamped: false };
-      })
+      cellDataList.map((cellData) => ({ ...cellData, stamped: false }))
     );
   };
 
-  const copyBoardToClipboard = function (): void {
+  const copyBoardToClipboard = (): void => {
     window.navigator.clipboard.writeText(emojiGrid(cellDataList));
   };
 
