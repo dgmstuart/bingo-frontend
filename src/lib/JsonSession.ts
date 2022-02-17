@@ -1,9 +1,9 @@
 class JsonSession<T> {
-  store = window.localStorage;
-  keyName = "sessionData";
+  #store = window.localStorage;
+  #keyName = "sessionData";
 
   get sessionData(): T | null {
-    const sessionDataString: string | null = this.store.getItem(this.keyName);
+    const sessionDataString: string | null = this.#store.getItem(this.#keyName);
     if (sessionDataString) {
       return JSON.parse(sessionDataString);
     } else {
@@ -13,9 +13,9 @@ class JsonSession<T> {
 
   set sessionData(sessionData: T | null) {
     if (sessionData) {
-      this.store.setItem(this.keyName, JSON.stringify(sessionData));
+      this.#store.setItem(this.#keyName, JSON.stringify(sessionData));
     } else {
-      this.store.removeItem(this.keyName);
+      this.#store.removeItem(this.#keyName);
     }
   }
 }
