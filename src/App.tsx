@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
+import useSession from "./hooks/useSession";
 import type { MouseEvent } from "react";
 import "./App.css";
 import ActionButton from "./components/ActionButton";
 import Grid from "./components/Grid";
-import GuaranteedJsonSession from "./lib/GuaranteedJsonSession";
 import { newWords } from "./lib/words";
 import emojiGrid from "./lib/emojiGrid";
 
@@ -20,17 +20,8 @@ const App = () => {
     });
   };
 
-  const session = useMemo(
-    () => new GuaranteedJsonSession<CellData[]>(newCellDataList),
-    []
-  );
-  const [cellDataList, setCellDataList] = useState<CellData[]>(
-    session.sessionData
-  );
-
-  useEffect(() => {
-    session.sessionData = cellDataList;
-  }, [session, cellDataList]);
+  const [cellDataList, setCellDataList] =
+    useSession<CellData[]>(newCellDataList);
 
   const setStamped = (index: number, stamped: boolean): void => {
     setCellDataList(
