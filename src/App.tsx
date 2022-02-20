@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import type { MouseEvent } from "react";
 import "./App.css";
 import ActionButton from "./components/ActionButton";
@@ -20,7 +20,10 @@ const App = () => {
     });
   };
 
-  const session = new GuaranteedJsonSession<CellData[]>(newCellDataList);
+  const session = useMemo(
+    () => new GuaranteedJsonSession<CellData[]>(newCellDataList),
+    []
+  );
   const [cellDataList, setCellDataList] = useState<CellData[]>(
     session.sessionData
   );
