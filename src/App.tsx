@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import type { MouseEvent } from "react";
 import "./App.css";
 import ActionButton from "./components/ActionButton";
@@ -28,13 +28,12 @@ const App = () => {
     session.sessionData
   );
 
-  const setAndSaveCellDataList = (list: CellData[]): void => {
-    session.sessionData = list;
-    setCellDataList(list);
-  };
+  useEffect(() => {
+    session.sessionData = cellDataList;
+  }, [session, cellDataList]);
 
   const setStamped = (index: number, stamped: boolean): void => {
-    setAndSaveCellDataList(
+    setCellDataList(
       cellDataList.map((cellData, cellDataIndex) => {
         if (index === cellDataIndex) {
           return { ...cellData, stamped: stamped };
@@ -60,11 +59,11 @@ const App = () => {
   }));
 
   const setNewWords: ButtonClickHandler = () => {
-    setAndSaveCellDataList(newCellDataList());
+    setCellDataList(newCellDataList());
   };
 
   const clearAllCells: ButtonClickHandler = () => {
-    setAndSaveCellDataList(
+    setCellDataList(
       cellDataList.map((cellData) => ({ ...cellData, stamped: false }))
     );
   };
