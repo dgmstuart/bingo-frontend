@@ -1,17 +1,14 @@
 import React from "react";
 import useSession from "./hooks/useSession";
-import type { MouseEvent } from "react";
 import "./App.css";
 import ActionButton from "./components/ActionButton";
 import Grid from "./components/Grid";
 import { newWords } from "./lib/words";
 import emojiGrid from "./lib/emojiGrid";
+import type { CellData, CellClickHandler, CellProps } from "./components/Cell";
+import type { ClickHandler } from "./clickHandler";
 
-type ClickHandler<T> = (event: MouseEvent<T>) => void;
-type CellClickHandler = ClickHandler<HTMLTableDataCellElement>;
 export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
-export type CellData = { word: string; stamped: boolean };
-export type CellProps = CellData & { toggleStamped: CellClickHandler };
 
 const App = () => {
   const newCellDataList = function (): CellData[] {

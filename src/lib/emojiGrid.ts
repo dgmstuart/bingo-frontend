@@ -1,4 +1,4 @@
-import type { CellData } from "../App";
+import type { CellData } from "../components/Cell";
 import chunk from "lodash/chunk";
 
 const emojiGrid = function (cellDataList: CellData[]): string {

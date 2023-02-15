@@ -1,5 +1,5 @@
 import GuaranteedJsonSession from "./GuaranteedJsonSession";
-import type { CellData } from "../App";
+import type { CellData } from "../components/Cell";
 
 beforeEach(() => {
   window.localStorage.clear();
