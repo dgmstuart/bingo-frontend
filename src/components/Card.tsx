@@ -1,16 +1,16 @@
 import React from "react";
-import useSession from "./hooks/useSession";
-import "./App.css";
-import ActionButton from "./components/ActionButton";
-import Grid from "./components/Grid";
-import { newWords } from "./lib/words";
-import emojiGrid from "./lib/emojiGrid";
-import type { CellData, CellClickHandler, CellProps } from "./components/Cell";
-import type { ClickHandler } from "./clickHandler";
+import useSession from "../hooks/useSession";
+import "./Card.css";
+import ActionButton from "./ActionButton";
+import Grid from "./Grid";
+import { newWords } from "../lib/words";
+import emojiGrid from "../lib/emojiGrid";
+import type { CellData, CellClickHandler, CellProps } from "./Cell";
+import type { ClickHandler } from "../clickHandler";
 
 export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
 
-const App = () => {
+const Card: React.FC = () => {
   const newCellDataList = function (): CellData[] {
     return newWords().map((word) => {
       return { word: word, stamped: false };
@@ -61,10 +61,10 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Card">
+      <header className="Card-header">
         <h1>Team Lindy Bingo</h1>
-        <div className="App-actions">
+        <div className="Card-actions">
           <ActionButton
             text="New card"
             onClick={setNewWords}
@@ -89,4 +89,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Card;
