@@ -31,6 +31,10 @@
   background-color: transparent;
 }
 
+.WordList-words {
+  margin: 0 25px;
+}
+
 .WordList-words li {
   margin-bottom: 5px;
 }
