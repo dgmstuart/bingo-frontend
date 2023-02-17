@@ -3,7 +3,7 @@ import useSession from "../hooks/useSession";
 import "./Card.css";
 import ActionButton from "./ActionButton";
 import Grid from "./Grid";
-import Footer from "./Footer";
+import MainLayout from "../layouts/MainLayout";
 import { newWords } from "../lib/words";
 import emojiGrid from "../lib/emojiGrid";
 import type { CellData, CellClickHandler, CellProps } from "./Cell";
@@ -61,35 +61,26 @@ const Card: React.FC = () => {
     window.navigator.clipboard.writeText(emojiGrid(cellDataList));
   };
 
-  return (
-    <div className="Card">
-      <header className="Card-header">
-        <h1>Team Lindy Bingo</h1>
-        <div className="Card-actions">
-          <ActionButton
-            text="New card"
-            onClick={setNewWords}
-            activeDuration={100}
-          />
-          <ActionButton
-            text="Clear"
-            onClick={clearAllCells}
-            activeDuration={100}
-          />
-          <ActionButton
-            text="Share"
-            changeText="Copied"
-            onClick={copyBoardToClipboard}
-            activeDuration={1500}
-          />
-        </div>
-      </header>
-
-      <Grid cellPropsList={cellPropsList} />
-
-      <Footer />
+  const cardActions = (
+    <div className="Card-actions">
+      <ActionButton
+        text="New card"
+        onClick={setNewWords}
+        activeDuration={100}
+      />
+      <ActionButton text="Clear" onClick={clearAllCells} activeDuration={100} />
+      <ActionButton
+        text="Share"
+        changeText="Copied"
+        onClick={copyBoardToClipboard}
+        activeDuration={1500}
+      />
     </div>
   );
+
+  const body = <Grid cellPropsList={cellPropsList} />;
+
+  return <MainLayout headerContent={cardActions} body={body} />;
 };
 
 export default Card;

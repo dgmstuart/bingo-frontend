@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import WordList from "./WordList";
-import { BrowserRouter } from "react-router-dom";
 
 describe("Word list page", () => {
   test("Lists out all the words on the page", () => {
@@ -23,11 +22,7 @@ describe("Word list page", () => {
       },
     ];
 
-    render(
-      <BrowserRouter>
-        <WordList wordList={wordList} />
-      </BrowserRouter>
-    );
+    render(<WordList wordList={wordList} />);
 
     screen.getByText("Animals that live where there are trees");
 

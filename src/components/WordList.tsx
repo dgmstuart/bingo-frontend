@@ -1,8 +1,6 @@
 import React, { ReactNode } from "react";
 import "./WordList.css";
 import normaliseWord from "../lib/normaliseWord";
-import { Link } from "react-router-dom";
-import Footer from "./Footer";
 
 type WordData = { word: string; url?: string; description?: string };
 export type WordListGroupData = {
@@ -14,21 +12,7 @@ export type WordListGroupData = {
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
 }) => {
-  return (
-    <div className="WordList">
-      <header className="WordList-header">
-        <h1>Team Lindy Bingo</h1>
-        <h2>Full word list</h2>
-        <div className="WordList-actions">
-          <Link to="/bingo-frontend">Back</Link>
-        </div>
-      </header>
-
-      {wordList.map((group) => WordListGroup(group))}
-
-      <Footer />
-    </div>
-  );
+  return <>{wordList.map((group) => WordListGroup(group))}</>;
 };
 
 const WordListGroup: React.FC<WordListGroupData> = ({
@@ -37,10 +21,10 @@ const WordListGroup: React.FC<WordListGroupData> = ({
   words,
 }) => {
   return (
-    <section className="WordList-words" key={title}>
+    <section className="WordListGroup" key={title}>
       <h3>{title}</h3>
       {description && (
-        <p className="WordList-group-description">{description}</p>
+        <p className="WordListGroup-description">{description}</p>
       )}
       <ul>
         {words.map(({ word, url, description }) => {

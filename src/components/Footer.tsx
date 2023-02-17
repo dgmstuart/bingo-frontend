@@ -1,10 +1,11 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <footer className="Footer">
+    <footer className={classNames("Footer", { className: className })}>
       <ul>
         <li>
           <Link to="/word_list">Full word list</Link>

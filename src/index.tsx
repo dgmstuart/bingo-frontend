@@ -5,6 +5,7 @@ import Card from "./components/Card";
 import { register } from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContentLayout from "./layouts/ContentLayout";
 import WordList from "./components/WordList";
 import wordList from "./wordList.json";
 
@@ -14,8 +15,14 @@ const router = createBrowserRouter([
     element: <Card />,
   },
   {
-    path: "/word_list",
-    element: <WordList wordList={wordList} />,
+    path: "/",
+    element: <ContentLayout pageTitle="Full word list" />,
+    children: [
+      {
+        path: "/word_list",
+        element: <WordList wordList={wordList} />,
+      },
+    ],
   },
 ]);
 

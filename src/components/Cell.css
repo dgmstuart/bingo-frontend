@@ -1,4 +1,5 @@
 .Cell {
+  text-align: center;
   font-size: calc(2vw + 4px);
   padding: calc(2vmin - 4px);
   border: 1px solid;
