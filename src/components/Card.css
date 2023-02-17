@@ -1,17 +1,3 @@
-.Card {
-  text-align: center;
-}
-
-.Card-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .Card-actions {
   margin-bottom: 15px;
 }
