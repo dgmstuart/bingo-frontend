@@ -7,12 +7,12 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContentLayout from "./layouts/ContentLayout";
 import WordList from "./components/WordList";
-import wordList from "./wordList.json";
+import wordList from "./data/teamLindyWordList.json";
 
 const router = createBrowserRouter([
   {
     path: "/bingo-frontend",
-    element: <Card />,
+    element: <Card wordList={wordList} />,
   },
   {
     path: "/",

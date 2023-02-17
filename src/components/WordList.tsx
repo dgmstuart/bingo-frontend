@@ -1,13 +1,7 @@
 import React, { ReactNode } from "react";
 import "./WordList.css";
 import normaliseWord from "../lib/normaliseWord";
-
-type WordData = { word: string; url?: string; description?: string };
-export type WordListGroupData = {
-  title: string;
-  description?: string;
-  words: WordData[];
-};
+import type { WordListGroupData } from "../data/wordList";
 
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
