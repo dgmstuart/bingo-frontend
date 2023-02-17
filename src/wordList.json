@@ -3,10 +3,19 @@
     "title": "Formations",
     "words": [
       { "word": "Circle formation" },
-      { "word": "Wedge formation" },
+      {
+        "word": "Wedge formation",
+        "description": "a tight triangle pointed at the audience"
+      },
       { "word": "Square formation or Diamond formation" },
-      { "word": "A single line facing the audience" },
-      { "word": "A jam circle" }
+      {
+        "word": "A single line facing the audience",
+        "description": "where the person at the front is hiding all the other dancers behind them"
+      },
+      {
+        "word": "A jam circle",
+        "description": "one or more dancers do their thing in the middle, while the rest of the group stands around them and claps"
+      }
     ]
   },
   {
@@ -16,8 +25,14 @@
       { "word": "The Snatch (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl" },
       { "word": "Lindy flip/ Lamppost/ Around the back (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl" },
       { "word": "Fly toss/ Popover/ Coochie toss (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al" },
-      { "word": "Waterfall (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl" },
-      { "word": "Knicker&shy;bocker or Baby flip (aerial)", "url":"https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl" },
+      {
+        "word": "Waterfall (aerial)",
+        "description": "any airstep where the flyer dives down the base's back and ends up between their legs",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl" },
+      { "word": "Knicker&shy;bocker or Baby flip (aerial)",
+        "description": "we'll count any flip where the flyer goes backwards over the base's arm",
+        "url":"https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
+      },
       { "word": "Kaye flip (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl" },
       { "word": "Leapfrog (Hoppa bock)" },
       { "word": "An aerial involving more than two people" },
@@ -53,8 +68,14 @@
     "title": "Group work",
     "words": [
       { "word": "Changing partners" },
-      { "word": "A canon (kanon)" },
-      { "word": "Slow motion" },
+      {
+        "word": "A canon (kanon)",
+        "description": "dancers take it in turns to perform the same or similar movements"
+      },
+      {
+        "word": "Slow motion",
+        "description": "dancing half-time is NOT slow motion!"
+      },
       { "word": "Mime or ”Acting”" },
       { "word": "Syncopated clapping" },
 
@@ -83,14 +104,20 @@
       { "word": "All-Swedish Team" },
       { "word": "A Swede not in Sweden" },
       { "word": "A Lithuanian not in Lithuania" },
-      { "word": "Somebody you have personally taken class from" }
+      {
+        "word": "Somebody you have personally taken class from",
+        "description": "or that you will take class from at this event!"
+      }
     ]
   },
   {
     "title": "Fashion Police",
     "words": [
       { "word": "A leader in white trainers" },
-      { "word": "Braces (susp&shy;enders)" },
+      {
+        "word": "Braces (susp&shy;enders)",
+        "description": "those straps which go over the shoulders and hold trousers up"
+      },
       { "word": "A hat" },
       { "word": "Brightly coloured trousers" },
       { "word": "Brightly coloured safety shorts" },

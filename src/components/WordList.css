@@ -39,6 +39,11 @@
   margin-bottom: 5px;
 }
 
+.WordList-description {
+  font-style: italic;
+  color: dimgray;
+}
+
 .WordList footer {
   padding: 25px 0;
   margin: 25px;

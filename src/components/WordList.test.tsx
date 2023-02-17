@@ -9,13 +9,16 @@ describe("Word list page", () => {
       {
         title: "Forest animals",
         words: [
-          { word: "Aardvark" },
+          { word: "Aardvark", description: "eats ants" },
           { word: "Badger", url: "https://badgers.com" },
         ],
       },
       {
-        title: "Dessert animals",
-        words: [{ word: "Camel" }],
+        title: "Desert animals",
+        words: [
+          { word: "Camel", description: "grumpy", url: "https://camels.com" },
+          { word: "Desert Fox" },
+        ],
       },
     ];
 
@@ -25,9 +28,16 @@ describe("Word list page", () => {
       </BrowserRouter>
     );
 
-    screen.getByText("Aardvark");
+    const aardvark = screen.getByText(/Aardvark/);
+    expect(aardvark.parentElement).toHaveTextContent("Aardvark - eats ants"); // eslint-disable-line testing-library/no-node-access
+
     const badger = screen.getByText("Badger");
     expect(badger).toHaveAttribute("href", "https://badgers.com");
-    screen.getByText("Camel");
+
+    const camel = screen.getByText(/Camel/);
+    expect(camel).toHaveAttribute("href", "https://camels.com");
+    expect(camel.parentElement).toHaveTextContent("Camel - grumpy"); // eslint-disable-line testing-library/no-node-access
+
+    screen.getByText("Desert Fox");
   });
 });
