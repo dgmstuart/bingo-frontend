@@ -1,55 +1,16 @@
-.WordList-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.WordList-header h2 {
-  margin-top: 0;
-}
-
-.WordList-actions {
-  margin-bottom: 15px;
-}
-
-.WordList-actions a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  line-height: 1.15;
-  font-weight: bold;
-  color: white;
-  border-color: white;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  background-color: transparent;
-}
-
-.WordList-words {
+.WordListGroup {
   margin: 0 25px;
 }
 
-.WordList-words li {
+.WordListGroup li {
   margin-bottom: 5px;
+}
+
+.WordListGroup-description {
+  color: dimgray;
 }
 
 .WordList-description {
   font-style: italic;
   color: dimgray;
-}
-
-.WordList-group-description {
-  color: dimgray;
-}
-
-.WordList footer {
-  padding: 25px 0;
-  margin: 25px;
-  border-top: solid 1px darkgray;
 }

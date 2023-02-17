@@ -1,0 +1,28 @@
+.Content-header {
+  margin-top: 0;
+}
+
+.Content-actions {
+  margin-bottom: 15px;
+}
+
+.Content-actions a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  line-height: 1.15;
+  font-weight: bold;
+  color: white;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+.Content-footer {
+  padding: 25px 0;
+  margin: 25px;
+  border-top: solid 1px darkgray;
+}
