@@ -1,19 +1,17 @@
 import React from "react";
-import useSession from "./hooks/useSession";
-import type { MouseEvent } from "react";
-import "./App.css";
-import ActionButton from "./components/ActionButton";
-import Grid from "./components/Grid";
-import { newWords } from "./lib/words";
-import emojiGrid from "./lib/emojiGrid";
+import useSession from "../hooks/useSession";
+import "./Card.css";
+import ActionButton from "./ActionButton";
+import Grid from "./Grid";
+import Footer from "./Footer";
+import { newWords } from "../lib/words";
+import emojiGrid from "../lib/emojiGrid";
+import type { CellData, CellClickHandler, CellProps } from "./Cell";
+import type { ClickHandler } from "../clickHandler";
 
-type ClickHandler<T> = (event: MouseEvent<T>) => void;
-type CellClickHandler = ClickHandler<HTMLTableDataCellElement>;
 export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
-export type CellData = { word: string; stamped: boolean };
-export type CellProps = CellData & { toggleStamped: CellClickHandler };
 
-const App = () => {
+const Card: React.FC = () => {
   const newCellDataList = function (): CellData[] {
     return newWords().map((word) => {
       return { word: word, stamped: false };
@@ -64,10 +62,10 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Card">
+      <header className="Card-header">
         <h1>Team Lindy Bingo</h1>
-        <div className="App-actions">
+        <div className="Card-actions">
           <ActionButton
             text="New card"
             onClick={setNewWords}
@@ -88,8 +86,10 @@ const App = () => {
       </header>
 
       <Grid cellPropsList={cellPropsList} />
+
+      <Footer />
     </div>
   );
 };
 
-export default App;
+export default Card;

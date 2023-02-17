@@ -1,15 +1,28 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import Card from "./components/Card";
 import { register } from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import WordList from "./components/WordList";
+import wordList from "./wordList.json";
 
-ReactDOM.render(
+const router = createBrowserRouter([
+  {
+    path: "/bingo-frontend",
+    element: <Card />,
+  },
+  {
+    path: "/word_list",
+    element: <WordList wordList={wordList} />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

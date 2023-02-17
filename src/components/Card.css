@@ -1,8 +1,8 @@
-.App {
+.Card {
   text-align: center;
 }
 
-.App-header {
+.Card-header {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
@@ -12,11 +12,11 @@
   color: white;
 }
 
-.App-actions {
+.Card-actions {
   margin-bottom: 15px;
 }
 
-.App-actions button {
+.Card-actions button {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
   line-height: 1.15;

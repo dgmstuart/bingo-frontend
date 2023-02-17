@@ -1,7 +1,6 @@
 import React from "react";
 import "./Grid.css";
-import Cell from "./Cell";
-import { CellProps } from "../App";
+import Cell, { CellProps } from "./Cell";
 import chunk from "lodash/chunk";
 
 const Grid: React.FC<{ cellPropsList: CellProps[] }> = ({ cellPropsList }) => {
