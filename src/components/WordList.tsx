@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
 type WordData = { word: string; url?: string; description?: string };
-export type WordListGroupData = { title: string; words: WordData[] };
+export type WordListGroupData = {
+  title: string;
+  description?: string;
+  words: WordData[];
+};
 
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
@@ -27,10 +31,17 @@ const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   );
 };
 
-const WordListGroup: React.FC<WordListGroupData> = ({ title, words }) => {
+const WordListGroup: React.FC<WordListGroupData> = ({
+  title,
+  description,
+  words,
+}) => {
   return (
     <section className="WordList-words" key={title}>
       <h3>{title}</h3>
+      {description && (
+        <p className="WordList-group-description">{description}</p>
+      )}
       <ul>
         {words.map(({ word, url, description }) => {
           const normalised = normaliseWord(word);

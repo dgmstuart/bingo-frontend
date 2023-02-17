@@ -8,6 +8,7 @@ describe("Word list page", () => {
     const wordList = [
       {
         title: "Forest animals",
+        description: "Animals that live where there are trees",
         words: [
           { word: "Aardvark", description: "eats ants" },
           { word: "Badger", url: "https://badgers.com" },
@@ -27,6 +28,8 @@ describe("Word list page", () => {
         <WordList wordList={wordList} />
       </BrowserRouter>
     );
+
+    screen.getByText("Animals that live where there are trees");
 
     const aardvark = screen.getByText(/Aardvark/);
     expect(aardvark.parentElement).toHaveTextContent("Aardvark - eats ants"); // eslint-disable-line testing-library/no-node-access
