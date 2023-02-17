@@ -1,6 +1,6 @@
-import wordList from "../wordList.json";
+import wordList from "../data/teamLindyWordList.json";
 import shuffle from "./shuffle";
-import type { WordListGroupData } from "../components/WordList";
+import type { WordListGroupData } from "../data/wordList";
 
 const words = wordList.reduce(
   (accumulator: string[], currentValue: WordListGroupData) => {
