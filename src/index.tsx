@@ -12,7 +12,7 @@ import wordList from "./data/teamLindyWordList.json";
 const router = createBrowserRouter([
   {
     path: "/bingo-frontend",
-    element: <Card />,
+    element: <Card wordList={wordList} />,
   },
   {
     path: "/",

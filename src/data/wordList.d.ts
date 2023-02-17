@@ -1,3 +1,4 @@
+export type WordListData = WordListGroupData[];
 export type WordListGroupData = {
   title: string;
   description?: string;

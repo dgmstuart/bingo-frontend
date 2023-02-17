@@ -4,12 +4,13 @@ import userEvent from "@testing-library/user-event";
 import Card from "./Card";
 import { BrowserRouter } from "react-router-dom";
 import stripIndent from "strip-indent";
+import wordList from "../data/teamLindyWordList.json";
 
 describe("'New card' button", () => {
   test("changes the words on the card", () => {
     render(
       <BrowserRouter>
-        <Card />
+        <Card wordList={wordList} />
       </BrowserRouter>
     );
     const initialCells = screen.queryAllByRole("gridcell");
@@ -26,7 +27,7 @@ describe("'New card' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card />
+        <Card wordList={wordList} />
       </BrowserRouter>
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -45,7 +46,7 @@ describe("'Clear' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card />
+        <Card wordList={wordList} />
       </BrowserRouter>
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -70,7 +71,7 @@ describe("'Share' button", () => {
     const user = userEvent.setup();
     render(
       <BrowserRouter>
-        <Card />
+        <Card wordList={wordList} />
         <textarea rows={5} />
       </BrowserRouter>
     );
