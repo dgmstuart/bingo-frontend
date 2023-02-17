@@ -3,6 +3,7 @@ import useSession from "../hooks/useSession";
 import "./Card.css";
 import ActionButton from "./ActionButton";
 import Grid from "./Grid";
+import Footer from "./Footer";
 import { newWords } from "../lib/words";
 import emojiGrid from "../lib/emojiGrid";
 import type { CellData, CellClickHandler, CellProps } from "./Cell";
@@ -85,6 +86,8 @@ const Card: React.FC = () => {
       </header>
 
       <Grid cellPropsList={cellPropsList} />
+
+      <Footer />
     </div>
   );
 };
