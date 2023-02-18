@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 const Footer: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <footer className={classNames("Footer", { className: className })}>
+    <footer className={classNames("Footer", className)}>
       <ul>
         <li>
           <Link to="/word_list">Full word list</Link>
