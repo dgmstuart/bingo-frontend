@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardActions.css";
 import ActionButton from "./ActionButton";
-import type { ButtonClickHandler } from "./Card";
+import type { ButtonClickHandler } from "../clickHandler";
 
 const CardActions: React.FC<{
   newClick: ButtonClickHandler;

@@ -7,9 +7,7 @@ import emojiGrid from "../lib/emojiGrid";
 import share from "../lib/share";
 import shuffle from "../lib/shuffle";
 import type { CellData, CellClickHandler, CellProps } from "./Cell";
-import type { ClickHandler } from "../clickHandler";
-
-export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
+import type { ButtonClickHandler } from "../clickHandler";
 
 const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
   const newWords = (): string[] => shuffle(wordList).slice(0, 25);
