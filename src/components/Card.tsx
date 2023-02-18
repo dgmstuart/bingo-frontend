@@ -4,6 +4,7 @@ import CardActions from "./CardActions";
 import Grid from "./Grid";
 import MainLayout from "../layouts/MainLayout";
 import emojiGrid from "../lib/emojiGrid";
+import share from "../lib/share";
 import shuffle from "../lib/shuffle";
 import type { CellData, CellClickHandler, CellProps } from "./Cell";
 import type { ClickHandler } from "../clickHandler";
@@ -58,25 +59,20 @@ const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
     );
   };
 
-  const copyBoardToClipboard: ButtonClickHandler = () => {
+  const shareCard: ButtonClickHandler = () => {
     const message = emojiGrid(cellDataList);
-
-    window.navigator.clipboard.writeText(message);
-
-    if (window.navigator.share) {
-      window.navigator.share({
-        title: "Team Lindy Bingo",
-        text: message,
-        url: "https://bit.ly/lindybingocard",
-      });
-    }
+    share({
+      title: "Team Lindy Bingo",
+      text: message,
+      url: "https://bit.ly/lindybingocard",
+    });
   };
 
   const headerContent = (
     <CardActions
       newClick={setNewWords}
       clearClick={clearAllCells}
-      shareClick={copyBoardToClipboard}
+      shareClick={shareCard}
     />
   );
   const body = <Grid cellPropsList={cellPropsList} />;
