@@ -4,7 +4,10 @@ import userEvent from "@testing-library/user-event";
 import Card from "./Card";
 import { BrowserRouter } from "react-router-dom";
 import stripIndent from "strip-indent";
-import wordList from "../data/teamLindyWordList.json";
+import teamLindyWordList from "../data/teamLindyWordList.json";
+import flattenWordList from "../lib/flattenWordList";
+
+const wordList: string[] = flattenWordList(teamLindyWordList);
 
 describe("'New card' button", () => {
   test("changes the words on the card", () => {
