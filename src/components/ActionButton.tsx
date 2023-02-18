@@ -1,5 +1,5 @@
 import React from "react";
-import type { ButtonClickHandler } from "./Card";
+import type { ButtonClickHandler } from "../clickHandler";
 
 const ActionButton: React.FC<{
   text: string;
