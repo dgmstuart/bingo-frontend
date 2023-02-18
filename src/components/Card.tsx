@@ -61,14 +61,15 @@ const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
 
   const copyBoardToClipboard: ButtonClickHandler = () => {
     const message = emojiGrid(cellDataList);
+
+    window.navigator.clipboard.writeText(message);
+
     if (window.navigator.share) {
       window.navigator.share({
-        title: "My Team Lindy Bingo card",
+        title: "Team Lindy Bingo",
         text: message,
         url: "https://bit.ly/lindybingocard",
       });
-    } else {
-      window.navigator.clipboard.writeText(message);
     }
   };
 
