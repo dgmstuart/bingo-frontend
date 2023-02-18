@@ -1,7 +1,6 @@
 import React from "react";
 import useSession from "../hooks/useSession";
-import "./Card.css";
-import ActionButton from "./ActionButton";
+import CardActions from "./CardActions";
 import Grid from "./Grid";
 import MainLayout from "../layouts/MainLayout";
 import emojiGrid from "../lib/emojiGrid";
@@ -73,26 +72,16 @@ const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
     }
   };
 
-  const cardActions = (
-    <div className="Card-actions">
-      <ActionButton
-        text="New card"
-        onClick={setNewWords}
-        activeDuration={100}
-      />
-      <ActionButton text="Clear" onClick={clearAllCells} activeDuration={100} />
-      <ActionButton
-        text="Share"
-        changeText="Copied"
-        onClick={copyBoardToClipboard}
-        activeDuration={1500}
-      />
-    </div>
+  const headerContent = (
+    <CardActions
+      newClick={setNewWords}
+      clearClick={clearAllCells}
+      shareClick={copyBoardToClipboard}
+    />
   );
-
   const body = <Grid cellPropsList={cellPropsList} />;
 
-  return <MainLayout headerContent={cardActions} body={body} />;
+  return <MainLayout headerContent={headerContent} body={body} />;
 };
 
 export default Card;
