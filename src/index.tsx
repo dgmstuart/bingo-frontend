@@ -1,34 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Card from "./components/Card";
 import { register } from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ContentLayout from "./layouts/ContentLayout";
-import WordList from "./components/WordList";
-import wordList from "./data/teamLindyWordList.json";
-
-const router = createBrowserRouter([
-  {
-    path: "/bingo-frontend",
-    element: <Card wordList={wordList} />,
-  },
-  {
-    path: "/",
-    element: <ContentLayout pageTitle="Full word list" />,
-    children: [
-      {
-        path: "/word_list",
-        element: <WordList wordList={wordList} />,
-      },
-    ],
-  },
-]);
+import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

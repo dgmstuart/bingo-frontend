@@ -4,17 +4,18 @@ import "./Card.css";
 import ActionButton from "./ActionButton";
 import Grid from "./Grid";
 import MainLayout from "../layouts/MainLayout";
-import { newWords } from "../lib/words";
 import emojiGrid from "../lib/emojiGrid";
-import type { WordListData } from "../data/wordList";
+import shuffle from "../lib/shuffle";
 import type { CellData, CellClickHandler, CellProps } from "./Cell";
 import type { ClickHandler } from "../clickHandler";
 
 export type ButtonClickHandler = ClickHandler<HTMLButtonElement>;
 
-const Card: React.FC<{ wordList: WordListData }> = ({ wordList }) => {
+const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
+  const newWords = (): string[] => shuffle(wordList).slice(0, 25);
+
   const newCellDataList = function (): CellData[] {
-    return newWords(wordList).map((word) => {
+    return newWords().map((word) => {
       return { word: word, stamped: false };
     });
   };

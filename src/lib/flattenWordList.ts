@@ -1,4 +1,3 @@
-import shuffle from "./shuffle";
 import type { WordListGroupData } from "../data/wordList";
 
 const flattenWordList = (wordList: WordListGroupData[]): string[] => {
@@ -11,7 +10,4 @@ const flattenWordList = (wordList: WordListGroupData[]): string[] => {
   );
 };
 
-export const newWords = (wordList: WordListGroupData[]): string[] => {
-  const words = flattenWordList(wordList);
-  return shuffle(words).slice(0, 25);
-};
+export default flattenWordList;
