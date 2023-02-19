@@ -31,7 +31,7 @@
         "description": "any airstep where the flyer dives down the base's back and ends up between their legs",
         "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl" },
       { "word": "Knicker&shy;bocker or Baby flip (aerial)",
-        "description": "we'll count any flip where the flyer goes backwards over the base's arm",
+        "description": "we'll count any flip where the flyer goes backwards over the base's arm. Names include: Hourglass, Side-flip",
         "url":"https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
       },
       { "word": "Kaye flip (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl" },
@@ -41,20 +41,31 @@
     ]
   },
   {
-    "title": "Dance steps",
+    "title": "Partnered dance steps",
     "words": [
       { "word": "The Chase", "url": "https://youtu.be/2KhCrKrKT7I?t=174" },
       { "word": "A Minne Dip", "url": "https://www.youtube.com/watch?v=XgDJAuZwiXw" },
       { "word": "Hacksaws", "url": "https://www.youtube.com/watch?v=2KhCrKrKT7I&t=218s" },
       { "word": "Tandem Charleston/ Back Charleston" },
       { "word": "Sailor Kicks" },
-      { "word": "Drags" },
-      { "word": "A really big kick" },
-
+      {
+        "word": "Drags",
+        "description": "follower lunges towards leader, who moves backwards dragging the follower with them"
+      }
+    ]
+  },
+  {
+    "title": "Solo dance steps",
+    "description": "If these are done with a partner, that of course counts as well!",
+    "words": [
       { "word": "Shorty George", "url": "https://www.youtube.com/watch?v=3RZK-LyksG4&t=84s" },
       { "word": "Shimmy" },
       { "word": "Itches" },
-      { "word": "Pecking" }
+      { "word": "Pecking" },
+      {
+        "word": "A really big kick",
+        "description": "we're talking REALLY big (could be solo)"
+      }
     ]
   },
   {
@@ -94,8 +105,7 @@
       { "word": "Somebody is upside-down" },
       { "word": "Somebody is on the floor" },
       { "word": "Somebody’s hand touches the ground" },
-      { "word": "Standing on shoulders" },
-      { "word": "Sitting on shoulders" }
+      { "word": "Sitting or standing on shoulders" }
     ]
   },
   {
@@ -117,7 +127,7 @@
       { "word": "A leader in white trainers" },
       {
         "word": "Braces (susp&shy;enders)",
-        "description": "those straps which go over the shoulders and hold trousers up"
+        "description": "straps which go over the shoulders and hold trousers up"
       },
       { "word": "A hat" },
       { "word": "Brightly coloured trousers" },
