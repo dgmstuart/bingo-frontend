@@ -20,24 +20,24 @@
   },
   {
     "title": "Air steps (\"Aerials\", \"Acro\")",
-    "description": "Terminology: \"Flyer\": the person flying through the air (often the follower), \"Base\": the person staying on the ground (often the leader)",
+    "description": "Terminology: \"Flyer\": the person flying through the air (often the follower), \"Thrower\": the person staying on the ground (often the leader)",
     "words": [
-      { "word": "The Pancake (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl"  },
-      { "word": "The Snatch (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl" },
-      { "word": "Lindy flip/ Lamppost/ Around the back (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl" },
-      { "word": "Fly toss/ Popover/ Coochie toss (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al" },
+      { "word": "A-frame/ Kick through (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02YC4vJ8dk6hFhzCZ7DpUZDizk4u5RD87GucoGuV5gnhC1SPib98kWEJC1YXtWGvkjl" },
+      { "word": "The Pancake (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl"  },
+      { "word": "The Snatch (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl" },
+      { "word": "Lindy flip/ Lamppost/ Around the back (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl" },
+      { "word": "Fly toss/ Popover/ Coochie toss (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al" },
       {
-        "word": "Waterfall (aerial)",
-        "description": "any airstep where the flyer dives down the base's back and ends up between their legs",
+        "word": "Waterfall (air&nbsp;step)",
+        "description": "any air step where the flyer dives down the thrower's back and ends up between their legs",
         "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl" },
-      { "word": "Knicker&shy;bocker or Baby flip (aerial)",
-        "description": "we'll count any flip where the flyer goes backwards over the base's arm. Names include: Hourglass, Side-flip",
+      { "word": "Knicker&shy;bocker or Baby flip (air&nbsp;step)",
+        "description": "we'll count any flip where the flyer goes backwards over the thrower's arm. Names include: Hourglass, Side-flip",
         "url":"https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
       },
-      { "word": "Kaye flip (aerial)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl" },
+      { "word": "Kaye flip (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl" },
       { "word": "Leapfrog (Hoppa bock)" },
-      { "word": "An aerial involving more than two people" },
-      { "word": "An aerial involving a cartwheel" }
+      { "word": "An air&nbsp;step involving more than two people" }
     ]
   },
   {
@@ -58,10 +58,11 @@
     "title": "Solo dance steps",
     "description": "If these are done with a partner, that of course counts as well!",
     "words": [
-      { "word": "Shorty George", "url": "https://www.youtube.com/watch?v=3RZK-LyksG4&t=84s" },
-      { "word": "Shimmy" },
       { "word": "Itches" },
       { "word": "Pecking" },
+      { "word": "Shorty George", "url": "https://www.youtube.com/watch?v=3RZK-LyksG4&t=84s" },
+      { "word": "Shimmy" },
+      { "word": "Spank the baby" },
       {
         "word": "A really big kick",
         "description": "we're talking REALLY big"
@@ -72,7 +73,7 @@
     "title": "Swingouts",
     "words": [
       { "word": "3 swingouts and a circle" },
-      { "word": "More than 4 swingouts in a row" },
+      { "word": "4 or more swingouts in a row" },
       { "word": "Swingouts in opposite directions" }
     ]
   },
@@ -86,7 +87,7 @@
       },
       {
         "word": "Slow motion",
-        "description": "dancing half-time is NOT slow motion!"
+        "description": "doing some kind of specific movement but much slower than normal. You'll know it when you see it! Dancing half-time doesn't count."
       },
       { "word": "Mime or ”Acting”" },
       { "word": "Syncopated clapping" },
@@ -103,8 +104,8 @@
     "title": "Positions",
     "words": [
       { "word": "Somebody is upside-down" },
-      { "word": "Somebody is on the floor" },
       { "word": "Somebody’s hand touches the ground" },
+      { "word": "Sitting or lying on the floor" },
       { "word": "Sitting or standing on shoulders" }
     ]
   },
@@ -124,7 +125,7 @@
   {
     "title": "Fashion Police",
     "words": [
-      { "word": "A leader in white trainers" },
+      { "word": "A leader in white sneakers" },
       {
         "word": "Braces (susp&shy;enders)",
         "description": "straps which go over the shoulders and hold trousers up"

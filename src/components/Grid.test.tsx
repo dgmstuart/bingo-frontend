@@ -28,7 +28,11 @@ const cellPropsList = [
   { word: "Bluebird", stamped: false, toggleStamped: toggleStamped },
   { word: "Boar", stamped: false, toggleStamped: toggleStamped },
   { word: "Bobcat", stamped: false, toggleStamped: toggleStamped },
-  { word: "Budgie", stamped: false, toggleStamped: toggleStamped },
+  {
+    word: "Friendly&nbsp;Budgie",
+    stamped: false,
+    toggleStamped: toggleStamped,
+  },
 ];
 
 test("displays the words in a grid", () => {
@@ -64,5 +68,5 @@ test("displays the words in a grid", () => {
   expect(row5).toHaveTextContent("Bluebird");
   expect(row5).toHaveTextContent("Boar");
   expect(row5).toHaveTextContent("Bobcat");
-  expect(row5).toHaveTextContent("Budgie");
+  expect(row5).toHaveTextContent("Friendly Budgie");
 });
