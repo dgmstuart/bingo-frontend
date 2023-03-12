@@ -19,7 +19,7 @@ const App: React.FC = () => {
       element: <ContentLayout pageTitle="Full word list" />,
       children: [
         {
-          path: "/word_list",
+          path: "/bingo-frontend/word_list",
           element: <WordList wordList={wordList} />,
         },
       ],
