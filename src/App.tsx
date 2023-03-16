@@ -4,6 +4,7 @@ import ContentLayout from "./layouts/ContentLayout";
 import Card from "./components/Card";
 import WordList from "./components/WordList";
 import wordList from "./data/teamLindyWordList.json";
+import QRCode from "./components/QRCode";
 import flattenWordList from "./lib/flattenWordList";
 
 const App: React.FC = () => {
@@ -21,6 +22,10 @@ const App: React.FC = () => {
         {
           path: "/bingo-frontend/word_list",
           element: <WordList wordList={wordList} />,
+        },
+        {
+          path: "/bingo-frontend/qr_code",
+          element: <QRCode />,
         },
       ],
     },
