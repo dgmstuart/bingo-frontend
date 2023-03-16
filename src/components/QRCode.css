@@ -1,0 +1,21 @@
+.QRCode {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.QRCodeButton {
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 0.25rem;
+  margin: 0 0.25rem;
+  line-height: 0;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.25rem;
+}
+
+.QRCodeButton img {
+  filter: invert(1);
+}
