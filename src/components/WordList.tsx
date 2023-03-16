@@ -6,7 +6,12 @@ import type { WordListGroupData } from "../data/wordList";
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
 }) => {
-  return <>{wordList.map((group) => WordListGroup(group))}</>;
+  return (
+    <>
+      <h2 className="Content-header">Full word list</h2>
+      {wordList.map((group) => WordListGroup(group))}
+    </>
+  );
 };
 
 const WordListGroup: React.FC<WordListGroupData> = ({
