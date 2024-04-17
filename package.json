@@ -1,8 +1,9 @@
 {
   "name": "bingo-frontend",
-  "version": "0.1.0",
-  "homepage": "https://dgmstuart.github.io/bingo-frontend",
   "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "homepage": "https://dgmstuart.github.io/bingo-frontend",
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.6.0",
     "classnames": "^2.5.1",
