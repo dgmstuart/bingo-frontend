@@ -3,6 +3,7 @@ import "./CardActions.css";
 import ActionButton from "./ActionButton";
 import { Link } from "react-router-dom";
 import qrCodeIcon from "../images/qrCodeIcon.svg";
+import query from "../lib/query";
 import type { ButtonClickHandler } from "../clickHandler";
 
 const CardActions: React.FC<{
@@ -20,7 +21,7 @@ const CardActions: React.FC<{
         onClick={shareClick}
         activeDuration={1500}
       />
-      <Link className="QRCodeButton" to="/bingo-frontend/qr_code">
+      <Link className="QRCodeButton" to={`/bingo-frontend/qr_code${query()}`}>
         <img src={qrCodeIcon} alt="QR code Icon" />
       </Link>
     </div>

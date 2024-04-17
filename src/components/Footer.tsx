@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import query from "../lib/query";
 import classNames from "classnames";
 
 const Footer: React.FC<{ className?: string }> = ({ className }) => {
@@ -8,7 +9,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
     <footer className={classNames("Footer", className)}>
       <ul>
         <li>
-          <Link to="/bingo-frontend/word_list">Full word list</Link>
+          <Link to={`/bingo-frontend/word_list${query()}`}>Full word list</Link>
         </li>
         <li>
           <a
