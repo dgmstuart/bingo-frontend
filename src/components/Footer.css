@@ -1,6 +1,6 @@
 .Footer {
   text-align: left;
-  padding: 25px
+  padding: 25px;
 }
 
 .Footer ul {
@@ -10,10 +10,10 @@
 }
 
 .Footer li {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .Footer a {
   text-decoration: none;
-  color: dimgray
+  color: dimgray;
 }

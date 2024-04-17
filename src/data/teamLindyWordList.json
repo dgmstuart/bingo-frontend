@@ -22,20 +22,40 @@
     "title": "Air steps (\"Aerials\", \"Akro\")",
     "description": "Terminology: \"Flyer\": the person flying through the air (often the follower), \"Thrower\": the person staying on the ground (often the leader)",
     "words": [
-      { "word": "A-frame/ Kick through (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02YC4vJ8dk6hFhzCZ7DpUZDizk4u5RD87GucoGuV5gnhC1SPib98kWEJC1YXtWGvkjl" },
-      { "word": "The Pancake (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl"  },
-      { "word": "The Snatch (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl" },
-      { "word": "Lindy flip/ Lamppost/ Around the back (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl" },
-      { "word": "Fly toss/ Popover/ Coochie toss (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al" },
+      {
+        "word": "A-frame/ Kick through (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02YC4vJ8dk6hFhzCZ7DpUZDizk4u5RD87GucoGuV5gnhC1SPib98kWEJC1YXtWGvkjl"
+      },
+      {
+        "word": "The Pancake (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl"
+      },
+      {
+        "word": "The Snatch (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl"
+      },
+      {
+        "word": "Lindy flip/ Lamppost/ Around the back (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl"
+      },
+      {
+        "word": "Fly toss/ Popover/ Coochie toss (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al"
+      },
       {
         "word": "Waterfall (air&nbsp;step)",
         "description": "any air step where the flyer dives down the thrower's back and ends up between their legs",
-        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl" },
-      { "word": "Knicker&shy;bocker or Baby flip (air&nbsp;step)",
-        "description": "we'll count any flip where the flyer goes backwards over the thrower's arm. Names include: Hourglass, Side-flip",
-        "url":"https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl"
       },
-      { "word": "Kay flip (air&nbsp;step)", "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl" },
+      {
+        "word": "Knicker&shy;bocker or Baby flip (air&nbsp;step)",
+        "description": "we'll count any flip where the flyer goes backwards over the thrower's arm. Names include: Hourglass, Side-flip",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
+      },
+      {
+        "word": "Kay flip (air&nbsp;step)",
+        "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl"
+      },
       { "word": "Leapfrog (Hoppa bock)" },
       { "word": "An air&nbsp;step involving more than two people" }
     ]
@@ -44,8 +64,14 @@
     "title": "Partnered dance steps",
     "words": [
       { "word": "The Chase", "url": "https://youtu.be/2KhCrKrKT7I?t=174" },
-      { "word": "A Minne Dip", "url": "https://www.youtube.com/watch?v=XgDJAuZwiXw" },
-      { "word": "Hacksaws", "url": "https://www.youtube.com/watch?v=2KhCrKrKT7I&t=218s" },
+      {
+        "word": "A Minne Dip",
+        "url": "https://www.youtube.com/watch?v=XgDJAuZwiXw"
+      },
+      {
+        "word": "Hacksaws",
+        "url": "https://www.youtube.com/watch?v=2KhCrKrKT7I&t=218s"
+      },
       { "word": "Tandem Charleston/ Back Charleston" },
       { "word": "Sailor Kicks" },
       {
@@ -60,7 +86,10 @@
     "words": [
       { "word": "Itches" },
       { "word": "Pecking" },
-      { "word": "Shorty George", "url": "https://www.youtube.com/watch?v=3RZK-LyksG4&t=84s" },
+      {
+        "word": "Shorty George",
+        "url": "https://www.youtube.com/watch?v=3RZK-LyksG4&t=84s"
+      },
       { "word": "Shimmy" },
       { "word": "Spank the baby" },
       {
@@ -139,9 +168,6 @@
   },
   {
     "title": "Other",
-    "words": [
-      { "word": "Mid-routine song change" }
-    ]
+    "words": [{ "word": "Mid-routine song change" }]
   }
 ]
-

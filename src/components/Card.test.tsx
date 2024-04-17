@@ -14,7 +14,7 @@ describe("'New card' button", () => {
     render(
       <BrowserRouter>
         <Card wordList={wordList} />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const initialCells = screen.queryAllByRole("gridcell");
     const firstWord = initialCells[0].textContent;
@@ -31,7 +31,7 @@ describe("'New card' button", () => {
     render(
       <BrowserRouter>
         <Card wordList={wordList} />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
 
@@ -50,7 +50,7 @@ describe("'Clear' button", () => {
     render(
       <BrowserRouter>
         <Card wordList={wordList} />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
     const firstCell = cells[0];
@@ -76,7 +76,7 @@ describe("'Share' button", () => {
       <BrowserRouter>
         <Card wordList={wordList} />
         <textarea rows={5} />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
     const firstCell = cells[0];

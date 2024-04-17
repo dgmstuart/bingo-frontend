@@ -7,7 +7,7 @@ type GetterSetters = [
   CellData[],
   (index: number, stamped: boolean) => CellClickHandler,
   ButtonClickHandler,
-  ButtonClickHandler
+  ButtonClickHandler,
 ];
 
 const useCard = (wordList: string[]): GetterSetters => {
@@ -30,13 +30,13 @@ const useCard = (wordList: string[]): GetterSetters => {
         } else {
           return cellData;
         }
-      })
+      }),
     );
   };
 
   const toggleStamped = function (
     index: number,
-    stamped: boolean
+    stamped: boolean,
   ): CellClickHandler {
     return () => {
       setStamped(index, !stamped);
@@ -49,7 +49,7 @@ const useCard = (wordList: string[]): GetterSetters => {
 
   const clearAllCells: ButtonClickHandler = () => {
     setCellDataList(
-      cellDataList.map((cellData) => ({ ...cellData, stamped: false }))
+      cellDataList.map((cellData) => ({ ...cellData, stamped: false })),
     );
   };
 
