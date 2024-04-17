@@ -6,7 +6,7 @@ const flattenWordList = (wordList: WordListGroupData[]): string[] => {
       const wordListGroupWords = currentValue["words"].map(({ word }) => word);
       return accumulator.concat(wordListGroupWords);
     },
-    []
+    [],
   );
 };
 

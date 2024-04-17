@@ -10,7 +10,7 @@ test("shows as stamped if stamped", () => {
           <Cell word="Budgie" stamped={true} toggleStamped={() => {}} />
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Budgie")).toHaveClass("stamped");
@@ -24,7 +24,7 @@ test("shows as not stamped if not stamped", () => {
           <Cell word="Budgie" stamped={false} toggleStamped={() => {}} />
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Budgie")).not.toHaveClass("stamped");

@@ -27,14 +27,14 @@ describe("Word list page", () => {
     screen.getByText("Animals that live where there are trees");
 
     const aardvark = screen.getByText(/Aardvark/);
-    expect(aardvark.parentElement).toHaveTextContent("Aardvark - eats ants"); // eslint-disable-line testing-library/no-node-access
+    expect(aardvark.parentElement).toHaveTextContent("Aardvark - eats ants");
 
     const badger = screen.getByText("Badger");
     expect(badger).toHaveAttribute("href", "https://badgers.com");
 
     const camel = screen.getByText(/Camel/);
     expect(camel).toHaveAttribute("href", "https://camels.com");
-    expect(camel.parentElement).toHaveTextContent("Camel - grumpy"); // eslint-disable-line testing-library/no-node-access
+    expect(camel.parentElement).toHaveTextContent("Camel - grumpy");
 
     screen.getByText("Desert Fox");
   });

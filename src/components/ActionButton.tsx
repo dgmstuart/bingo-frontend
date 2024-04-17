@@ -15,7 +15,10 @@ const ActionButton: React.FC<{
     target.disabled = false;
   };
 
-  const setStyles = function (element: HTMLElement, styles: Object) {
+  const setStyles = function (
+    element: HTMLElement,
+    styles: React.CSSProperties,
+  ) {
     Object.assign(element.style, styles);
   };
 
