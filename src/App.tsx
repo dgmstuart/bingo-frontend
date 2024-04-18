@@ -9,22 +9,23 @@ import flattenWordList from "./lib/flattenWordList";
 
 const App: React.FC = () => {
   const flattenedWordList = flattenWordList(wordList);
+  const rootPath = "/bingo-frontend";
 
   const router = createBrowserRouter([
     {
-      path: "/bingo-frontend",
+      path: rootPath,
       element: <Card wordList={flattenedWordList} />,
     },
     {
-      path: "/",
+      path: rootPath,
       element: <ContentLayout />,
       children: [
         {
-          path: "/bingo-frontend/word_list",
+          path: "word_list",
           element: <WordList wordList={wordList} />,
         },
         {
-          path: "/bingo-frontend/qr_code",
+          path: "qr_code",
           element: <QRCode />,
         },
       ],

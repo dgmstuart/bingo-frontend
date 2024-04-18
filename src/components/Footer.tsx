@@ -8,7 +8,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
     <footer className={classNames("Footer", className)}>
       <ul>
         <li>
-          <Link to="/bingo-frontend/word_list">Full word list</Link>
+          <Link to="word_list">Full word list</Link>
         </li>
         <li>
           <a
