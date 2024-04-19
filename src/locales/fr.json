@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "back": "Retour",
+    "cardActions": {
+      "new": "Carte neuve",
+      "clear": "Effacer",
+      "share": "Partager",
+      "copied": "Copié"
+    },
+    "footer": {
+      "wordList": "Liste de mots",
+      "videoList": "Liste de vidéos",
+      "about": "À propos"
+    }
+  }
+}
