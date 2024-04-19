@@ -7,7 +7,7 @@ const ContentLayout: React.FC = () => {
   const headerContent = (
     <>
       <div className="Content-actions">
-        <Link to="/bingo-frontend">Back</Link>
+        <Link to=".">Back</Link>
       </div>
     </>
   );
