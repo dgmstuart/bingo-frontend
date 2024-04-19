@@ -1,20 +1,22 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContentLayout from "./layouts/ContentLayout";
-import Card from "./components/Card";
-import WordList from "./components/WordList";
-import wordList from "./data/teamLindyWordList.json";
+import Card from "./components/DynamicCard";
+import WordList from "./components/DynamicWordList";
 import QRCode from "./components/QRCode";
-import flattenWordList from "./lib/flattenWordList";
+import {
+  defaultWordListLoader,
+  wordListLoader,
+} from "./loaders/wordListLoaders";
 
 const App: React.FC = () => {
-  const flattenedWordList = flattenWordList(wordList);
   const rootPath = "/bingo-frontend";
 
   const router = createBrowserRouter([
     {
       path: rootPath,
-      element: <Card wordList={flattenedWordList} />,
+      loader: defaultWordListLoader,
+      element: <Card />,
     },
     {
       path: rootPath,
@@ -22,7 +24,29 @@ const App: React.FC = () => {
       children: [
         {
           path: "word_list",
-          element: <WordList wordList={wordList} />,
+          element: <WordList />,
+          loader: defaultWordListLoader,
+        },
+        {
+          path: "qr_code",
+          element: <QRCode />,
+        },
+      ],
+    },
+    {
+      path: `${rootPath}/:wordListName`,
+      loader: wordListLoader,
+      element: <Card />,
+    },
+    {
+      path: `${rootPath}/:wordListName`,
+      loader: wordListLoader,
+      element: <ContentLayout />,
+      children: [
+        {
+          path: "word_list",
+          element: <WordList />,
+          loader: wordListLoader,
         },
         {
           path: "qr_code",
