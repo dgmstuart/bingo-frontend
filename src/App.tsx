@@ -34,12 +34,12 @@ const App: React.FC = () => {
       ],
     },
     {
-      path: `${rootPath}/:wordListName`,
+      path: `${rootPath}/:lang/:wordListName`,
       loader: wordListLoader,
       element: <Card />,
     },
     {
-      path: `${rootPath}/:wordListName`,
+      path: `${rootPath}/:lang/:wordListName`,
       loader: wordListLoader,
       element: <ContentLayout />,
       children: [

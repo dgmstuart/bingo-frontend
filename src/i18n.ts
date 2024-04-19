@@ -9,3 +9,5 @@ i18n.use(initReactI18next).init({
   lng: "sv",
   fallbackLng: "en",
 });
+
+export default i18n;
