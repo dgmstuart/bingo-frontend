@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "back": "Tillbaka",
+    "cardActions": {
+      "new": "Nytt kort",
+      "clear": "Rensa",
+      "share": "Dela",
+      "copied": "Kopierad"
+    },
+    "footer": {
+      "wordList": "Fullständig ordlista",
+      "videoList": "Fullständig videolista",
+      "about": "Om"
+    }
+  }
+}
