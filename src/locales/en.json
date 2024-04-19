@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "back": "Back",
+    "cardActions": {
+      "new": "New card",
+      "clear": "Clear",
+      "share": "Share",
+      "copied": "Copied"
+    },
+    "footer": {
+      "wordList": "Full word list",
+      "videoList": "Full video list",
+      "about": "About"
+    }
+  }
+}
