@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import useLanguage from "../hooks/useLanguage";
+import useOpenState from "../hooks/useOpenState";
 import "./LanguagePicker.css";
 import classNames from "classnames";
 import type { SupportedLanguageCode } from "../i18n";
@@ -21,13 +22,8 @@ const LanguagePicker: React.FC = () => {
     languages[currentCode as SupportedLanguageCode];
   const languageCodes = Object.keys(languages);
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleOpen: MenuClickHandler = () => {
-    return setIsOpen(!isOpen);
-  };
-
-  const close = () => setIsOpen(false);
+  const { isOpen, toggle, close } = useOpenState(false);
+  const toggleOpen: MenuClickHandler = toggle;
 
   return (
     <div className="LanguagePicker">
