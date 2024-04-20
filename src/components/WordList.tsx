@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import "./WordList.css";
 import normaliseWord from "../lib/normaliseWord";
 import type { WordListGroupData } from "../data/wordList";
@@ -6,9 +7,11 @@ import type { WordListGroupData } from "../data/wordList";
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <h2 className="Content-header">Full word list</h2>
+      <h2 className="Content-header">{t("wordList.title")}</h2>
       {wordList.map((group) => WordListGroup(group))}
     </>
   );
