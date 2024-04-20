@@ -1,0 +1,47 @@
+.LanguagePicker {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 25px;
+  text-align: right;
+}
+
+.LanguagePicker ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.LanguagePicker .current {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid dimgray;
+  width: min-content;
+  padding: 15px;
+  margin-left: auto; /* shouldn't be required? */
+  width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.50);
+}
+
+.LanguagePicker .menu {
+  background-color: white;
+  display: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid dimgray;
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.50);
+}
+
+.LanguagePicker .menu.open {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.LanguagePicker .menu .currentMenuItem {
+  font-weight: bold;
+}
