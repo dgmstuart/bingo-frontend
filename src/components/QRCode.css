@@ -8,16 +8,13 @@
   display: inline-block;
   vertical-align: bottom;
   line-height: 0;
-  border-color: var(--bg-light);
+  border-color: white;
   border-width: 2px;
   border-style: solid;
   border-radius: 0.25rem;
 }
 
-.QRCodeIcon {
+.QRCodeButton img {
+  filter: invert(1);
   height: 2rem;
-  width: 2rem;
-  background-image: url("../images/qrCodeIcon.svg");
-  background-size: cover;
-  --bg-light: red;
 }

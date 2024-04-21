@@ -23,8 +23,3 @@ a.external::after {
   background-size: contain;
   display: inline-block;
 }
-
-.Card {
-  --bg-dark: hsla(232, 20%, 5%, 0.7);
-  --bg-light: hsla(28, 41%, 95%, 0.7);
-}

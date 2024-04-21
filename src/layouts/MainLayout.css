@@ -1,14 +1,13 @@
 .Card {
-  background-image: url("../images/noise.svg");
-  border-bottom: 5px solid var(--bg-dark);
+  background-color: #282c34;
+  padding-bottom: 5px;
   box-shadow: 0px 5px 23px -8px #000000;
 }
 
 .Main-header {
   text-align: center;
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
-  filter: contrast(1.5);
+  background-color: #282c34;
+  color: #fcfaf7;
   padding: 15px;
 }
 

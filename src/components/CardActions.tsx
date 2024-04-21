@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./CardActions.css";
 import ActionButton from "./ActionButton";
 import { Link } from "react-router-dom";
+import qrCodeIcon from "../images/qrCodeIcon.svg";
 import type { ButtonClickHandler } from "../clickHandler";
 
 const CardActions: React.FC<{
@@ -32,7 +33,7 @@ const CardActions: React.FC<{
         activeDuration={1500}
       />
       <Link className="QRCodeButton" to="qr_code">
-        <div className="QRCodeIcon" />
+        <img src={qrCodeIcon} alt="QR code Icon" />
       </Link>
     </div>
   );
