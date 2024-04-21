@@ -1,7 +1,15 @@
 .QRCode {
+  background-color: var(--bg-light);
+}
+
+.QRCodeImage {
   margin: auto;
   display: block;
-  max-width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
 }
 
 .QRCodeButton {
