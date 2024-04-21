@@ -1,10 +1,12 @@
 .CardActions {
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: auto;
 }
 
 .CardActions button {
   padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
   font-size: 14px;
   font-weight: bold;
   color: white;

@@ -1,12 +1,11 @@
 .Main-header {
   text-align: center;
   background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   color: white;
+  padding-bottom: 15px;
 }
 .Main-header h1 {
+  margin-block: 0; /* reset user agent styles */
+  padding: 0.67em 0 0.67em;
   font-size: calc(30px + 2vmin);
 }
