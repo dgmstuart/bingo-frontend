@@ -2,10 +2,6 @@
   margin-block-start: 0; /* reset user agent style */
 }
 
-.Content-actions {
-  margin-bottom: 15px;
-}
-
 .Content-actions a {
   display: inline-block;
   text-decoration: none;
@@ -13,8 +9,8 @@
   margin: 0 0.5rem;
   line-height: 1.15;
   font-weight: bold;
-  color: white;
-  border-color: white;
+  color: var(--bg-light);
+  border-color: var(--bg-light);
   border-width: 2px;
   border-style: solid;
   border-radius: 0.25rem;
