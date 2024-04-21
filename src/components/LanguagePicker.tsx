@@ -8,12 +8,12 @@ import type { SupportedLanguageCode } from "../i18n";
 import type { ClickHandler } from "../clickHandler";
 
 type MenuClickHandler = ClickHandler<HTMLDivElement>;
-type LanguageData = { text: string; emoji: string };
+type LanguageData = { text: string; flagCode: string };
 
 const languages: { [key in SupportedLanguageCode]: LanguageData } = {
-  en: { text: "English", emoji: "🇬🇧" },
-  fr: { text: "Francais", emoji: "🇫🇷" },
-  sv: { text: "Svenska", emoji: "🇸🇪" },
+  en: { text: "English", flagCode: "GB" },
+  fr: { text: "Francais", flagCode: "FR" },
+  sv: { text: "Svenska", flagCode: "SE" },
 };
 
 const LanguagePicker: React.FC = () => {
@@ -38,7 +38,7 @@ const LanguagePicker: React.FC = () => {
         ))}
       </ul>
       <div className="current" onClick={toggleOpen}>
-        {currentLanguage.emoji}
+        <Flag language={currentLanguage} aspectRatio={"1x1"} />
       </div>
     </div>
   );
@@ -49,7 +49,8 @@ const LanguageOption: React.FC<{
   isCurrent: boolean;
   closeMenu: () => void;
 }> = ({ languageCode, isCurrent, closeMenu }) => {
-  const { text, emoji } = languages[languageCode as SupportedLanguageCode];
+  const language = languages[languageCode as SupportedLanguageCode];
+  const { text } = language;
   const { i18n } = useTranslation();
 
   const setLanguage = async (language: string | undefined) => {
@@ -65,12 +66,24 @@ const LanguageOption: React.FC<{
 
   return (
     <li
-      className={classNames({ currentMenuItem: isCurrent })}
+      className={classNames("menuItem", { currentMenuItem: isCurrent })}
       onClick={clickHandler}
     >
-      <span className="text">{text}</span> {emoji}
+      <span className="text">{text}</span>{" "}
+      <Flag language={language} aspectRatio={"3x2"} />
     </li>
   );
+};
+
+type AspectRatio = "1x1" | "3x2";
+const Flag: React.FC<{ language: LanguageData; aspectRatio: AspectRatio }> = ({
+  language,
+  aspectRatio,
+}) => {
+  const { flagCode, text } = language;
+  const flagUrl = `http://purecatamphetamine.github.io/country-flag-icons/${aspectRatio}/${flagCode}.svg`;
+
+  return <img className="Flag" alt={text} src={flagUrl} />;
 };
 
 export default LanguagePicker;

@@ -4,6 +4,7 @@
   right: 0;
   padding: 15px;
   text-align: right;
+  font-size: calc(2vmin + 10px);
 }
 
 .LanguagePicker ul {
@@ -15,15 +16,13 @@
 .LanguagePicker .current {
   background-color: white;
   border-radius: 50%;
-  border: 1px solid dimgray;
   width: min-content;
-  padding: 15px;
+  height: 2em; /* needs to match width of Flag */
+  overflow: hidden;
   margin-left: auto; /* shouldn't be required? */
-  width: 1em;
-  height: 1em;
   display: flex;
   align-items: center;
-  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.50);
 }
 
 .LanguagePicker .menu {
@@ -32,16 +31,34 @@
   margin-bottom: 10px;
   border-radius: 5px;
   padding: 15px;
-  border: 1px solid dimgray;
-  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.50);
 }
 
 .LanguagePicker .menu.open {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 20px;
 }
 
-.LanguagePicker .menu .currentMenuItem {
+.LanguagePicker .menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.LanguagePicker .menuItem .text{
+  margin-right: 0.5em;
+}
+
+.LanguagePicker .menuItem .Flag{
+  border-radius: 2px;
+}
+
+.LanguagePicker .currentMenuItem {
   font-weight: bold;
+}
+
+.Flag {
+  width: 2em;
+  overflow: hidden;
 }
