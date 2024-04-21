@@ -23,3 +23,8 @@ a.external::after {
   background-size: contain;
   display: inline-block;
 }
+
+:root {
+  --bg-light: #fcfaf7;
+}
+
