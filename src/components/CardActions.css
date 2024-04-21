@@ -1,6 +1,6 @@
 .CardActions {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   max-width: 400px;
   margin: auto;
 }

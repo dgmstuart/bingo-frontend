@@ -1,5 +1,5 @@
 .Content-header {
-  margin-left: 25px;
+  margin-block-start: 0; /* reset user agent style */
 }
 
 .Content-actions {
@@ -23,6 +23,4 @@
 
 .Content-footer {
   padding: 25px 0;
-  margin: 25px;
-  border-top: solid 1px darkgray;
 }

@@ -1,11 +1,31 @@
+.Card {
+  background-color: #282c34;
+  padding-bottom: 5px;
+  box-shadow: 0px 5px 23px -8px #000000;
+}
+
 .Main-header {
   text-align: center;
   background-color: #282c34;
-  color: white;
-  padding-bottom: 15px;
+  color: #fcfaf7;
+  padding: 15px;
 }
+
 .Main-header h1 {
   margin-block: 0; /* reset user agent styles */
-  padding: 0.67em 0 0.67em;
-  font-size: calc(30px + 2vmin);
+  margin-bottom: 10px;
+  font-size: calc(20px + 2vmin);
+  font-family: "Jost", sans-serif;
+  font-weight: 900;
+}
+
+.Main-header h1 .bingo {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: calc(50px + 2vmin);
+  line-height: 1.3;
+  max-width: 600px;
+  margin: auto;
 }

@@ -1,8 +1,9 @@
 .Cell {
   text-align: center;
   font-size: calc(2vw + 4px);
+  font-size: calc(1.97vw + 4px);
   padding: calc(2vmin - 4px);
-  border: 1px solid;
+  border: 2px solid #282c34;
   vertical-align: middle;
   overflow-wrap: break-word;
 }

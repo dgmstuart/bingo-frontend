@@ -10,10 +10,10 @@ const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   const { t } = useTranslation();
 
   return (
-    <>
+    <article className="WordList">
       <h2 className="Content-header">{t("wordList.title")}</h2>
       {wordList.map((group) => WordListGroup(group))}
-    </>
+    </article>
   );
 };
 

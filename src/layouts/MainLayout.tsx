@@ -10,14 +10,24 @@ const MainLayout: React.FC<{
 }> = ({ headerContent, body, footerClass }) => {
   return (
     <div>
-      <header className="Main-header">
-        <h1>Team Lindy Bingo</h1>
+      <section className="Card">
+        <header className="Main-header">
+          <h1>
+            Team Lindy
+            <em className="bingo">
+              <span>B</span>
+              <span>I</span>
+              <span>N</span>
+              <span>G</span>
+              <span>O</span>
+            </em>
+          </h1>
 
-        {headerContent}
-      </header>
+          {headerContent}
+        </header>
 
-      {body}
-
+        {body}
+      </section>
       <Footer className={footerClass} />
       <LanguagePicker />
     </div>
