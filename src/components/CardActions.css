@@ -9,8 +9,8 @@
   padding: 0.5rem 1rem;
   font-size: 14px;
   font-weight: bold;
-  color: white;
-  border-color: white;
+  color: var(--bg-light);
+  border-color: var(--bg-light);
   border-width: 2px;
   border-style: solid;
   border-radius: 0.25rem;
