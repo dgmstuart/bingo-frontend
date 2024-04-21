@@ -81,7 +81,7 @@ const Flag: React.FC<{ language: LanguageData; aspectRatio: AspectRatio }> = ({
   aspectRatio,
 }) => {
   const { flagCode, text } = language;
-  const flagUrl = `http://purecatamphetamine.github.io/country-flag-icons/${aspectRatio}/${flagCode}.svg`;
+  const flagUrl = `https://purecatamphetamine.github.io/country-flag-icons/${aspectRatio}/${flagCode}.svg`;
 
   return <img className="Flag" alt={text} src={flagUrl} />;
 };
