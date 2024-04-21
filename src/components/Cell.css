@@ -3,7 +3,7 @@
   font-size: calc(2vw + 4px);
   font-size: calc(1.97vw + 4px);
   padding: calc(2vmin - 4px);
-  border: 2px solid #282c34;
+  border: 2px solid var(--bg-dark);
   vertical-align: middle;
   overflow-wrap: break-word;
 }
