@@ -11,6 +11,7 @@ const MainLayout: React.FC<{
   return (
     <div>
       <section className="Card">
+        <div className="noise-overlay"></div>
         <header className="Main-header">
           <h1>
             Team Lindy
