@@ -7,6 +7,9 @@
       "share": "Share",
       "copied": "Copied"
     },
+    "wordList": {
+      "title": "Full word list"
+    },
     "footer": {
       "wordList": "Full word list",
       "videoList": "Full video list",

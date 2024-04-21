@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import "./MainLayout.css";
 import Footer from "../components/Footer";
+import LanguagePicker from "../components/LanguagePicker";
 
 const MainLayout: React.FC<{
   headerContent: ReactNode;
@@ -18,6 +19,7 @@ const MainLayout: React.FC<{
       {body}
 
       <Footer className={footerClass} />
+      <LanguagePicker />
     </div>
   );
 };
