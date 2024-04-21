@@ -39,8 +39,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent;
-  pointer-events: none; /* Allows clicks to pass through to elements below */
-  filter: url('../images/noise.svg#noiseFilter');
   z-index: 20;
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+
+  @supports (filter: url('../images/noise.svg#noiseFilter')) {
+    background: transparent;
+    filter: url('../images/noise.svg#noiseFilter');
+  }
+
+  @supports not (filter: url('../images/noise.svg#noiseFilter')) {
+    background-image: url("../images/noise-5.png");
+  }
 }
