@@ -5,6 +5,7 @@
   padding: 15px;
   text-align: right;
   font-size: calc(2vmin + 10px);
+  z-index: 30;
 }
 
 .LanguagePicker ul {
