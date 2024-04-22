@@ -25,6 +25,7 @@ a.external::after {
 }
 
 :root {
-  --bg-light: #fcfaf7;
+  --dark: #282c34;
+  --off-white: #fcfaf7;
 }
 

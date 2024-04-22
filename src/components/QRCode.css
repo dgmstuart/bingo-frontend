@@ -1,5 +1,5 @@
 .QRCode {
-  background-color: var(--bg-light);
+  background-color: var(--off-white);
 }
 
 .QRCodeImage {
@@ -16,7 +16,7 @@
   display: inline-block;
   vertical-align: bottom;
   line-height: 0;
-  border-color: white;
+  border-color: var(--off-white);
   border-width: 2px;
   border-style: solid;
   border-radius: 0.25rem;

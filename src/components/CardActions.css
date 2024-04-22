@@ -10,8 +10,8 @@
   padding: 0.7em 1.3em;
   line-height: 1;
   font-weight: bold;
-  color: white;
-  border-color: white;
+  color: var(--off-white);
+  border-color: var(--off-white);
   border-width: 2px;
   border-style: solid;
   border-radius: 0.25rem;

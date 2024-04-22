@@ -1,5 +1,5 @@
 .Card {
-  background-color: #282c34;
+  background-color: var(--dark);
   padding-bottom: 15px;
   box-shadow: 0px 5px 23px -8px #000000;
   position: relative;
@@ -8,8 +8,8 @@
 
 .Main-header {
   text-align: center;
-  background-color: #282c34;
-  color: #fcfaf7;
+  background-color: var(--dark);
+  color: var(--off-white);
   padding: 15px;
   position: relative;
 }
