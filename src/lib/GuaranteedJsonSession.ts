@@ -7,8 +7,14 @@ class GuaranteedJsonSession<T> {
   #session: JsonSession<T>;
   #initFunction: () => T;
 
-  constructor(initFunction: () => T) {
-    this.#session = new JsonSession<T>();
+  constructor({
+    keyName,
+    initFunction,
+  }: {
+    keyName: string;
+    initFunction: () => T;
+  }) {
+    this.#session = new JsonSession<T>(keyName);
     this.#initFunction = initFunction;
   }
 

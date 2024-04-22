@@ -10,7 +10,7 @@ type GetterSetters = [
   ButtonClickHandler,
 ];
 
-const useCard = (wordList: string[]): GetterSetters => {
+const useCard = (id: string, wordList: string[]): GetterSetters => {
   const newWords = (): string[] => shuffle(wordList).slice(0, 25);
 
   const newCellDataList = function (): CellData[] {
@@ -19,8 +19,10 @@ const useCard = (wordList: string[]): GetterSetters => {
     });
   };
 
-  const [cellDataList, setCellDataList] =
-    useSession<CellData[]>(newCellDataList);
+  const [cellDataList, setCellDataList] = useSession<CellData[]>({
+    keyName: `bingoSession-${id}`,
+    initFunction: newCellDataList,
+  });
 
   const setStamped = (index: number, stamped: boolean): void => {
     setCellDataList(

@@ -13,7 +13,7 @@ describe("'New card' button", () => {
   test("changes the words on the card", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} name={""} url={""} />
+        <Card wordList={wordList} name={""} url={""} id={""} />
       </BrowserRouter>,
     );
     const initialCells = screen.queryAllByRole("gridcell");
@@ -30,7 +30,7 @@ describe("'New card' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} name={""} url={""} />
+        <Card wordList={wordList} name={""} url={""} id={""} />
       </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -49,7 +49,7 @@ describe("'Clear' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} name={""} url={""} />
+        <Card wordList={wordList} name={""} url={""} id={""} />
       </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -74,7 +74,7 @@ describe("'Share' button", () => {
     const user = userEvent.setup();
     render(
       <BrowserRouter>
-        <Card wordList={wordList} name={""} url={""} />
+        <Card wordList={wordList} name={""} url={""} id={""} />
         <textarea rows={5} />
       </BrowserRouter>,
     );

@@ -6,7 +6,7 @@ beforeEach(() => {
 });
 
 test("can store an array of cell data in the session", () => {
-  const session = new JsonSession<CellData[]>();
+  const session = new JsonSession<CellData[]>("key");
 
   session.sessionData = [
     { word: "Aardvark", stamped: false },
@@ -20,7 +20,7 @@ test("can store an array of cell data in the session", () => {
 });
 
 test("returns null if nothing is stored", () => {
-  const session = new JsonSession();
+  const session = new JsonSession("Key");
 
   expect(session.sessionData).toEqual(null);
 });

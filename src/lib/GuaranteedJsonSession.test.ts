@@ -7,7 +7,10 @@ beforeEach(() => {
 
 test("can store an array of cell data in the session", () => {
   const initFunction = () => [];
-  const session = new GuaranteedJsonSession<CellData[]>(initFunction);
+  const session = new GuaranteedJsonSession<CellData[]>({
+    keyName: "key",
+    initFunction,
+  });
 
   session.sessionData = [
     { word: "Aardvark", stamped: false },
@@ -22,7 +25,10 @@ test("can store an array of cell data in the session", () => {
 
 test("returns a new array if nothing is stored", () => {
   const initFunction = () => [{ word: "Camel", stamped: false }];
-  const session = new GuaranteedJsonSession<CellData[]>(initFunction);
+  const session = new GuaranteedJsonSession<CellData[]>({
+    keyName: "key",
+    initFunction,
+  });
 
   expect(session.sessionData).toEqual([{ word: "Camel", stamped: false }]);
 });
