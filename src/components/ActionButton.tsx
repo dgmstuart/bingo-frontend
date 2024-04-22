@@ -15,31 +15,15 @@ const ActionButton: React.FC<{
     target.disabled = false;
   };
 
-  const setStyles = function (
-    element: HTMLElement,
-    styles: React.CSSProperties,
-  ) {
-    Object.assign(element.style, styles);
-  };
-
   const buttonActive = function (element: HTMLButtonElement) {
-    const {
-      innerText,
-      style: { color, backgroundColor },
-    } = element;
+    const { innerText } = element;
 
     setTimeout(() => {
-      setStyles(element, {
-        color: color,
-        backgroundColor: backgroundColor,
-      });
+      element.classList.remove("active");
       element.innerText = innerText;
     }, activeDuration);
 
-    setStyles(element, {
-      color: "#282c34",
-      backgroundColor: "white",
-    });
+    element.classList.add("active");
     if (changeText) {
       element.innerText = changeText;
     }

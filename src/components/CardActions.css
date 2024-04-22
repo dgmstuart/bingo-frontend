@@ -17,3 +17,8 @@
   border-radius: 0.25rem;
   background-color: transparent;
 }
+
+.CardActions button.active {
+  color: var(--dark);
+  background-color: var(--off-white);
+}
