@@ -1,4 +1,4 @@
-import type { WordListGroupData } from "../data/wordList";
+import type { WordListGroupData } from "../data/config";
 
 const flattenWordList = (wordList: WordListGroupData[]): string[] => {
   return wordList.reduce(

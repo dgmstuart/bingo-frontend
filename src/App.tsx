@@ -4,10 +4,7 @@ import ContentLayout from "./layouts/ContentLayout";
 import Card from "./components/DynamicCard";
 import WordList from "./components/DynamicWordList";
 import QRCode from "./components/QRCode";
-import {
-  defaultWordListLoader,
-  wordListLoader,
-} from "./loaders/wordListLoaders";
+import { defaultConfigLoader, configLoader } from "./loaders/configLoaders";
 
 const App: React.FC = () => {
   const rootPath = "/bingo-frontend";
@@ -15,42 +12,45 @@ const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: rootPath,
-      loader: defaultWordListLoader,
+      loader: defaultConfigLoader,
       element: <Card />,
     },
     {
       path: rootPath,
       element: <ContentLayout />,
+      loader: defaultConfigLoader,
       children: [
         {
           path: "word_list",
           element: <WordList />,
-          loader: defaultWordListLoader,
+          loader: defaultConfigLoader,
         },
         {
           path: "qr_code",
           element: <QRCode />,
+          loader: configLoader,
         },
       ],
     },
     {
-      path: `${rootPath}/:wordListName`,
-      loader: wordListLoader,
+      path: `${rootPath}/:gameName`,
+      loader: configLoader,
       element: <Card />,
     },
     {
-      path: `${rootPath}/:wordListName`,
-      loader: wordListLoader,
+      path: `${rootPath}/:gameName`,
+      loader: configLoader,
       element: <ContentLayout />,
       children: [
         {
           path: "word_list",
           element: <WordList />,
-          loader: wordListLoader,
+          loader: configLoader,
         },
         {
           path: "qr_code",
           element: <QRCode />,
+          loader: configLoader,
         },
       ],
     },

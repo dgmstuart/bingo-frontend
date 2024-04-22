@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import "./WordList.css";
 import normaliseWord from "../lib/normaliseWord";
-import type { WordListGroupData } from "../data/wordList";
+import type { WordListGroupData } from "../data/config";
 
 const WordList: React.FC<{ wordList: WordListGroupData[] }> = ({
   wordList,
