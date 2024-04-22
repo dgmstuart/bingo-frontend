@@ -8,13 +8,16 @@ import share from "../lib/share";
 import type { CellProps } from "./Cell";
 import type { ButtonClickHandler } from "../clickHandler";
 
-const Card: React.FC<{ name: string; url: string; wordList: string[] }> = ({
-  name,
-  url,
-  wordList,
-}) => {
-  const [cellDataList, toggleStamped, setNewWords, clearAllCells] =
-    useCard(wordList);
+const Card: React.FC<{
+  id: string;
+  name: string;
+  url: string;
+  wordList: string[];
+}> = ({ id, name, url, wordList }) => {
+  const [cellDataList, toggleStamped, setNewWords, clearAllCells] = useCard(
+    id,
+    wordList,
+  );
 
   const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => ({
     ...cellData,

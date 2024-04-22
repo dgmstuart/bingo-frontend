@@ -1,6 +1,10 @@
 class JsonSession<T> {
   #store = window.localStorage;
-  #keyName = "sessionData";
+  #keyName: string;
+
+  constructor(keyName: string) {
+    this.#keyName = keyName;
+  }
 
   get sessionData(): T | null {
     const sessionDataString: string | null = this.#store.getItem(this.#keyName);

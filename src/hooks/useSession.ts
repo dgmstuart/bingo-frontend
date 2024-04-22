@@ -3,10 +3,16 @@ import GuaranteedJsonSession from "../lib/GuaranteedJsonSession";
 
 type GetterSetter<T> = [T, (data: T) => void];
 
-const useSession = function <T>(initialData: () => T): GetterSetter<T> {
+const useSession = function <T>({
+  keyName,
+  initFunction,
+}: {
+  keyName: string;
+  initFunction: () => T;
+}): GetterSetter<T> {
   const session = useMemo(
-    () => new GuaranteedJsonSession<T>(initialData),
-    [initialData],
+    () => new GuaranteedJsonSession<T>({ keyName, initFunction }),
+    [initFunction],
   );
 
   const [data, setData] = useState<T>(session.sessionData);

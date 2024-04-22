@@ -28,7 +28,7 @@ const App: React.FC = () => {
         {
           path: "qr_code",
           element: <QRCode />,
-          loader: configLoader,
+          loader: defaultConfigLoader,
         },
       ],
     },
