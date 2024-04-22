@@ -7,7 +7,6 @@ import type { Config } from "../data/config";
 const QRCode: React.FC = () => {
   const { url } = useLoaderData() as Config;
 
-  console.log(url);
   return (
     <div className="QRCode">
       <QRCodeImage
