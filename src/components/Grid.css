@@ -5,6 +5,14 @@
   background-color: #fcfaf7;
 }
 
+.Grid tr:first-child td {
+  border-top: none;
+}
+
+.Grid tr:last-child td {
+  border-bottom: none;
+}
+
 .Row {
   height: 80px;
 }
