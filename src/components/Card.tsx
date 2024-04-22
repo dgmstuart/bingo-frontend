@@ -6,13 +6,14 @@ import MainLayout from "../layouts/MainLayout";
 import emojiGrid from "../lib/emojiGrid";
 import share from "../lib/share";
 import type { CellProps } from "./Cell";
+import type { StyledWord } from "../data/config";
 import type { ButtonClickHandler } from "../clickHandler";
 
 const Card: React.FC<{
   id: string;
   name?: string;
   url: string;
-  wordList: string[];
+  wordList: StyledWord[];
   videoListUrl?: string;
 }> = ({ id, name, url, wordList, videoListUrl }) => {
   const [cellDataList, toggleStamped, setNewWords, clearAllCells] = useCard(
