@@ -28,41 +28,52 @@
       "words": [
         {
           "word": "A-frame/ Kick through (air&nbsp;step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02YC4vJ8dk6hFhzCZ7DpUZDizk4u5RD87GucoGuV5gnhC1SPib98kWEJC1YXtWGvkjl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02YC4vJ8dk6hFhzCZ7DpUZDizk4u5RD87GucoGuV5gnhC1SPib98kWEJC1YXtWGvkjl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "The Pancake (air&nbsp;step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02GhobQkT4E6aFuzcSA65Xh7vuhFNFKke4QfoxtND6M5W4Ph9d6Cxnb2twELp4oWmKl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "The Snatch (air&nbsp;step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02WrC2URf9ymSaz5HeFf2sHFn1DEU7kKvFEePa5tZhScJECTGeWkYPjcCkM2KNvjGyl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "Around the back/ Lindy flip (air&nbsp;step)",
           "description": "other names inlcude: Lamppost, Frankie flip",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02aPcc6Qg8QG1Qn7tT9x57rqn3naQrD6bTmmStRDYXPfChAjtpmoYCj7GuDVUK8q1Rl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "Fly toss/ Popover/ Coochie toss (air&nbsp;step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0fyeCLwscJhJNztmUssHMM7UGSH5xsgcJ8p5SV3jh6EAGHqz88QfHDHorEWGB4e4Al",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "Waterfall (air&nbsp;step)",
           "description": "any air step where the flyer dives down the thrower's back and ends up between their legs",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0szHyFmKxNim2YkyytE23gMZzoxmJfNH5ZzdLbTgEFEjeyNKypfRfJrH9ie71gzGkl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "Side-flip or Knicker&shy;bocker (air&nbsp;step)",
           "description": "we'll count any flip where the flyer goes backwards over the thrower's arm. Other names include: Hourglass, Baby Flip, Basket toss",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02DfYEzswugCzMMs3W1KAh9U4ez5N8GinH7hYYgZLMPAeCGuTt7c5VdXaCioGyKsXBl",
+          "cssClasses": ["highlighted"]
         },
         {
           "word": "Kay flip (air&nbsp;step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl"
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid017Db7GsyyXKECRubM93hivcwRKUx1HQ64pBa9cedLgnJwGa7j6wX9bk2S9AdcBKpl",
+          "cssClasses": ["highlighted"]
         },
         { "word": "Leapfrog (Hoppa bock)" },
-        { "word": "An air&nbsp;step involving more than two people" }
+        {
+          "word": "An air&nbsp;step involving more than two people",
+          "cssClasses": ["highlighted"]
+        }
       ]
     },
     {
