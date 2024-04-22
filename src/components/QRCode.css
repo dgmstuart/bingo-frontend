@@ -13,8 +13,6 @@
 }
 
 .QRCodeButton {
-  display: inline-block;
-  vertical-align: bottom;
   line-height: 0;
   border-color: var(--off-white);
   border-width: 2px;
