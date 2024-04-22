@@ -170,9 +170,12 @@
       "description": "If you're not sure where someone comes from, ask your neighbour!",
       "words": [
         { "word": "Mixed-nationality team" },
-        { "word": "All-Swedish Team" },
-        { "word": "A Swede not in Sweden" },
-        { "word": "A Lithuanian not in Lithuania" },
+        { "word": "All-Swedish Team", "cssClasses": ["flag", "flag-se"] },
+        { "word": "A Swede not in Sweden", "cssClasses": ["flag", "flag-se"] },
+        {
+          "word": "A Lithuanian not in Lithuania",
+          "cssClasses": ["flag", "flag-lt"]
+        },
         {
           "word": "Somebody you have personally taken class from",
           "description": "or that you will take class from at this event!"
