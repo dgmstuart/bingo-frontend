@@ -1,4 +1,4 @@
-import defaultWordList from "../data/teamLindyWordList.json";
+import defaultWordList from "../data/teamLindy.json";
 import JsonDataImporter from "../lib/JsonDataImporter";
 import type { Params } from "react-router-dom";
 import type { WordListData } from "../data/wordList";
