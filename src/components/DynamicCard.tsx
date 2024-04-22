@@ -2,7 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Card from "./Card";
 import flattenWordList from "../lib/flattenWordList";
-import type { WordListData } from "../data/wordList";
+import type { WordListData } from "../data/config";
 
 const DynamicCard: React.FC = () => {
   const wordList = useLoaderData() as WordListData;
