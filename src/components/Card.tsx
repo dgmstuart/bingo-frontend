@@ -8,7 +8,11 @@ import share from "../lib/share";
 import type { CellProps } from "./Cell";
 import type { ButtonClickHandler } from "../clickHandler";
 
-const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
+const Card: React.FC<{ name: string; url: string; wordList: string[] }> = ({
+  name,
+  url,
+  wordList,
+}) => {
   const [cellDataList, toggleStamped, setNewWords, clearAllCells] =
     useCard(wordList);
 
@@ -20,9 +24,9 @@ const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
   const shareCard: ButtonClickHandler = () => {
     const message = emojiGrid(cellDataList);
     share({
-      title: "Team Lindy Bingo",
+      title: `${name} Bingo`,
       text: message,
-      url: "https://bit.ly/lindybingocard",
+      url: url,
     });
   };
 
@@ -35,7 +39,7 @@ const Card: React.FC<{ wordList: string[] }> = ({ wordList }) => {
   );
   const body = <Grid cellPropsList={cellPropsList} />;
 
-  return <MainLayout headerContent={headerContent} body={body} />;
+  return <MainLayout name={name} headerContent={headerContent} body={body} />;
 };
 
 export default Card;

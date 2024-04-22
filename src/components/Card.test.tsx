@@ -4,16 +4,16 @@ import userEvent from "@testing-library/user-event";
 import Card from "./Card";
 import { BrowserRouter } from "react-router-dom";
 import stripIndent from "strip-indent";
-import teamLindyWordList from "../data/teamLindy.json";
+import teamLindy from "../data/teamLindy.json";
 import flattenWordList from "../lib/flattenWordList";
 
-const wordList: string[] = flattenWordList(teamLindyWordList);
+const wordList: string[] = flattenWordList(teamLindy.wordList);
 
 describe("'New card' button", () => {
   test("changes the words on the card", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} />
+        <Card wordList={wordList} name={""} url={""} />
       </BrowserRouter>,
     );
     const initialCells = screen.queryAllByRole("gridcell");
@@ -30,7 +30,7 @@ describe("'New card' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} />
+        <Card wordList={wordList} name={""} url={""} />
       </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -49,7 +49,7 @@ describe("'Clear' button", () => {
   test("clears any stamped cells", () => {
     render(
       <BrowserRouter>
-        <Card wordList={wordList} />
+        <Card wordList={wordList} name={""} url={""} />
       </BrowserRouter>,
     );
     const cells = screen.queryAllByRole("gridcell");
@@ -74,7 +74,7 @@ describe("'Share' button", () => {
     const user = userEvent.setup();
     render(
       <BrowserRouter>
-        <Card wordList={wordList} />
+        <Card wordList={wordList} name={""} url={""} />
         <textarea rows={5} />
       </BrowserRouter>,
     );

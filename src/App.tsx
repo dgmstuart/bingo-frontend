@@ -18,6 +18,7 @@ const App: React.FC = () => {
     {
       path: rootPath,
       element: <ContentLayout />,
+      loader: defaultConfigLoader,
       children: [
         {
           path: "word_list",
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         {
           path: "qr_code",
           element: <QRCode />,
+          loader: configLoader,
         },
       ],
     },
@@ -48,6 +50,7 @@ const App: React.FC = () => {
         {
           path: "qr_code",
           element: <QRCode />,
+          loader: configLoader,
         },
       ],
     },

@@ -1,3 +1,8 @@
+export type Config = {
+  name?: string;
+  url: string;
+  wordList: WordListData;
+};
 export type WordListData = WordListGroupData[];
 export type WordListGroupData = {
   title: string;

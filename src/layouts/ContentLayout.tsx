@@ -2,11 +2,13 @@ import React from "react";
 import "../i18n";
 import { useTranslation } from "react-i18next";
 import "./ContentLayout.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 import MainLayout from "./MainLayout";
+import type { Config } from "../data/config";
 
 const ContentLayout: React.FC = () => {
   const { t } = useTranslation();
+  const { name = "" } = useLoaderData() as Config;
 
   const headerContent = (
     <>
@@ -20,6 +22,7 @@ const ContentLayout: React.FC = () => {
 
   return (
     <MainLayout
+      name={name}
       headerContent={headerContent}
       body={body}
       footerClass="Content-footer"

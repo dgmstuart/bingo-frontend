@@ -4,17 +4,18 @@ import Footer from "../components/Footer";
 import LanguagePicker from "../components/LanguagePicker";
 
 const MainLayout: React.FC<{
+  name: string;
   headerContent: ReactNode;
   body: ReactNode;
   footerClass?: string;
-}> = ({ headerContent, body, footerClass }) => {
+}> = ({ name, headerContent, body, footerClass }) => {
   return (
     <div>
       <section className="Card">
         <div className="noise-overlay"></div>
         <header className="Main-header">
           <h1>
-            Team Lindy
+            {name}
             <em className="bingo">
               <span>B</span>
               <span>I</span>
