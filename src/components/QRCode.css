@@ -22,7 +22,10 @@
   border-radius: 0.25rem;
 }
 
-.QRCodeButton img {
+.QRCodeIcon {
+  height: 2.25em;
+  width: 2.25em;
   filter: invert(1);
-  height: 2rem;
+  background-image: url("../images/qrCodeIcon.svg");
+  background-size: cover;
 }
