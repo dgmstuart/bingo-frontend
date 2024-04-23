@@ -8,7 +8,7 @@ import type { Config } from "../data/config";
 
 const ContentLayout: React.FC = () => {
   const { t } = useTranslation();
-  const { name = "", videoListUrl } = useLoaderData() as Config;
+  const { name, videoListUrl } = useLoaderData() as Config;
 
   const headerContent = (
     <>

@@ -5,13 +5,8 @@ import flattenWordList from "../lib/flattenWordList";
 import type { KeyedConfig } from "../loaders/configLoaders";
 
 const DynamicCard: React.FC = () => {
-  const {
-    id,
-    name = "",
-    url,
-    wordList,
-    videoListUrl,
-  } = useLoaderData() as KeyedConfig;
+  const { id, name, url, wordList, videoListUrl } =
+    useLoaderData() as KeyedConfig;
 
   if (wordList.length > 0) {
     // Card saves the word list to the session, so don't render a card if the

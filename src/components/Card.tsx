@@ -10,7 +10,7 @@ import type { ButtonClickHandler } from "../clickHandler";
 
 const Card: React.FC<{
   id: string;
-  name: string;
+  name?: string;
   url: string;
   wordList: string[];
   videoListUrl?: string;
