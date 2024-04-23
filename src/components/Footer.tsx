@@ -5,7 +5,10 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-const Footer: React.FC<{ className?: string }> = ({ className }) => {
+const Footer: React.FC<{ className?: string; videoListUrl?: string }> = ({
+  className,
+  videoListUrl,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -14,14 +17,13 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
         <li>
           <Link to="word_list">{t("footer.wordList")}</Link>
         </li>
-        <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLgsIo5h4KQoYzMCvcuBFTy7-qW8VgsFpT"
-            className="external"
-          >
-            {t("footer.videoList")}
-          </a>
-        </li>
+        {videoListUrl && (
+          <li>
+            <a href={videoListUrl} className="external">
+              {t("footer.videoList")}
+            </a>
+          </li>
+        )}
         <li>
           <a
             href="https://dgmstuart.github.io/blog/2022/02/18/building-a-bingo-app-in-react/"

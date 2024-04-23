@@ -4,11 +4,12 @@ import Footer from "../components/Footer";
 import LanguagePicker from "../components/LanguagePicker";
 
 const MainLayout: React.FC<{
-  name: string;
+  name?: string;
   headerContent: ReactNode;
   body: ReactNode;
   footerClass?: string;
-}> = ({ name, headerContent, body, footerClass }) => {
+  videoListUrl?: string;
+}> = ({ name, headerContent, body, footerClass, videoListUrl }) => {
   return (
     <div>
       <section className="Card">
@@ -30,7 +31,7 @@ const MainLayout: React.FC<{
 
         {body}
       </section>
-      <Footer className={footerClass} />
+      <Footer className={footerClass} videoListUrl={videoListUrl} />
       <LanguagePicker />
     </div>
   );

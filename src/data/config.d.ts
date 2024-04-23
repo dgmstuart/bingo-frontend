@@ -1,6 +1,7 @@
 export type Config = {
   name?: string;
   url: string;
+  videoListUrl?: string;
   wordList: WordListData;
 };
 export type WordListData = WordListGroupData[];
