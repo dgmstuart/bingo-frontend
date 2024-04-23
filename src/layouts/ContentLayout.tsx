@@ -8,7 +8,7 @@ import type { Config } from "../data/config";
 
 const ContentLayout: React.FC = () => {
   const { t } = useTranslation();
-  const { name = "" } = useLoaderData() as Config;
+  const { name = "", videoListUrl } = useLoaderData() as Config;
 
   const headerContent = (
     <>
@@ -26,6 +26,7 @@ const ContentLayout: React.FC = () => {
       headerContent={headerContent}
       body={body}
       footerClass="Content-footer"
+      videoListUrl={videoListUrl}
     />
   );
 };

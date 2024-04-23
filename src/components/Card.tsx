@@ -13,7 +13,8 @@ const Card: React.FC<{
   name: string;
   url: string;
   wordList: string[];
-}> = ({ id, name, url, wordList }) => {
+  videoListUrl?: string;
+}> = ({ id, name, url, wordList, videoListUrl }) => {
   const [cellDataList, toggleStamped, setNewWords, clearAllCells] = useCard(
     id,
     wordList,
@@ -42,7 +43,14 @@ const Card: React.FC<{
   );
   const body = <Grid cellPropsList={cellPropsList} />;
 
-  return <MainLayout name={name} headerContent={headerContent} body={body} />;
+  return (
+    <MainLayout
+      name={name}
+      headerContent={headerContent}
+      body={body}
+      videoListUrl={videoListUrl}
+    />
+  );
 };
 
 export default Card;
