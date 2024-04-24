@@ -29,12 +29,13 @@ const WordListGroup: React.FC<WordListGroupData> = ({
         <p className="WordListGroup-description">{description}</p>
       )}
       <ul>
-        {words.map(({ word, url, description }) => {
+        {words.map(({ word, url, emoji, description }) => {
           const normalised = normaliseWord(word);
           return (
             <li key={normalised}>
               <DescribableWord
                 Word={LinkableWord({ word: normalised, url: url })}
+                emoji={emoji}
                 description={description}
               />
             </li>
@@ -45,19 +46,23 @@ const WordListGroup: React.FC<WordListGroupData> = ({
   );
 };
 
-const DescribableWord: React.FC<{ Word: ReactNode; description?: string }> = ({
-  Word,
-  description,
-}) => {
-  if (description) {
-    return (
-      <React.Fragment>
-        {Word} - <span className="WordList-description">{description}</span>
-      </React.Fragment>
-    );
-  } else {
-    return <React.Fragment>{Word}</React.Fragment>;
-  }
+const DescribableWord: React.FC<{
+  Word: ReactNode;
+  emoji?: string;
+  description?: string;
+}> = ({ Word, emoji, description }) => {
+  return (
+    <React.Fragment>
+      {Word}
+      {emoji && <> {emoji} </>}
+      {description && (
+        <>
+          <> - </>
+          <span className="WordList-description">{description}</span>
+        </>
+      )}
+    </React.Fragment>
+  );
 };
 
 const LinkableWord: React.FC<{ word: string; url?: string }> = ({

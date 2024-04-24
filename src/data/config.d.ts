@@ -10,4 +10,9 @@ export type WordListGroupData = {
   description?: string;
   words: WordData[];
 };
-export type WordData = { word: string; url?: string; description?: string };
+export type WordData = {
+  word: string;
+  url?: string;
+  emoji?: string;
+  description?: string;
+};

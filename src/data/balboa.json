@@ -1,0 +1,155 @@
+{
+  "name": "Balboa",
+  "url": "https://dgmstuart.github.io/bingo-frontend/balboa",
+  "wordList": [
+    {
+      "title": "Moves",
+      "words": [
+        { "word": "Double spin" },
+        { "word": "Triple spin" },
+        { "word": "Leader spin (at least 360º)" },
+        { "word": "Texas Tommy" },
+        { "word": "Collegiate shag" },
+        { "word": "Hangman" },
+        { "word": "Both dancers jump" },
+        {
+          "word": "Follower crossovers, leader doesn't cross",
+          "description": "Surely there’s a proper name for this?"
+        }
+      ]
+    },
+    {
+      "title": "Travelling moves",
+      "words": [
+        { "word": "Drags" },
+        { "word": "Travelling crossovers" },
+        { "word": "Grapevine" },
+        {
+          "word": "Heel slide",
+          "description": "(Usually the leader) slides in a line or a circle with the heel of their front foot"
+        },
+        {
+          "word": "A big slide",
+          "description": "ie. a slide which actually travels across the floor"
+        }
+      ]
+    },
+    {
+      "title": "Solo dance steps",
+      "description": "Steps from solo jazz, done with (or without!) a partner",
+      "words": [
+        { "word": "Eagle slide", "emoji": "🦅" },
+        { "word": "Mess around" },
+        { "word": "Pecking", "emoji": "🐓" },
+        { "word": "A double kick" },
+        {
+          "word": "A really big kick",
+          "description": "we're talking REALLY big"
+        }
+      ]
+    },
+    {
+      "title": "Poses",
+      "words": [
+        { "word": "Hold a pose with a finger in the air", "emoji": "🕺" },
+        {
+          "word": "Stop step",
+          "emoji": "🛑",
+          "description": "(not sure if this is the right name?) both leader and follower slide feet outwards and go split weight"
+        },
+        { "word": "(That thing where you both open out)" },
+        { "word": "Freeze for at least 4 counts", "emoji": "🥶" },
+        { "word": "Pointing at the audience/ camera", "emoji": "👉" },
+        { "word": "Follower does footwork, leader stays still" }
+      ]
+    },
+    {
+      "title": "Positions",
+      "words": [
+        { "word": "Somebody is lifted fully off the ground" },
+        { "word": "Somebody is upside down!", "emoji": "🙃" },
+        { "word": "Somebody’s hand touches the ground" },
+        { "word": "Sitting or kneeling on the floor", "emoji": "🧘" }
+      ]
+    },
+    {
+      "title": "Airsteps and flash",
+      "words": [
+        {
+          "word": "Scorpion/ Flutter kicks",
+          "emoji": "🦂",
+          "description": "(these probably aren't the proper names?) drags position, follower's legs kick up and out behind them."
+        },
+        {
+          "word": "Carousel (flash step)",
+          "emoji": "🎠",
+          "description": "Betty and Hal Takier, as seen in Maharaja: the follower clamps leader's thigh between their thighs so that they're fully off the ground. Spinning round often occurs.",
+          "url": "https://youtu.be/ehVZktW0BK4?si=0EFbgU_5502dHpC8&t=114"
+        },
+        {
+          "word": "Betty drop (flash step)",
+          "description": "After Betty Takier: follower slides down and relies on leader to hold them up",
+          "url": "https://youtu.be/ebw84iWPDz8?si=uyN5iIpfq9aWRp5y&t=243"
+        },
+        {
+          "word": "Hal drop (flash step)",
+          "description": "After Hal Takier: leader slides down and relies on follower to hold them up",
+          "url": "https://youtu.be/ebw84iWPDz8?si=HXx_8QuXZ-WXWpNV&t=248"
+        },
+        {
+          "word": "Bart leg (flash step)",
+          "emoji": "🦵",
+          "description": "After Bart Bartolo: leader suddenly lunges down low on one leg and then sweeps back up with the other leg",
+          "url": "https://youtu.be/bvlMrEthxxE?si=Dzz1eFoJb98c14jj&t=51"
+        },
+        {
+          "word": "Doll drop (flash step)",
+          "description": "(maybe not the right name?) leader supports the follower with their arms under the follower's armpits, while the follower (facing away) drops down"
+        },
+        {
+          "word": "Candlestick (flash step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0Pu1ht1kXB4gtsydYocRFXkQR1WuxsQy38EcQTfVfWX4aEw4wMjrFErgzTpzAE4B3l",
+          "description": "Leader lifts the follower upside down above their head"
+        }
+      ]
+    },
+    {
+      "title": "Connections",
+      "words": [
+        { "word": "Linked arms", "emoji": "🔗" },
+        { "word": "Elbow catch", "emoji": "💪" },
+        { "word": "Double hand hold" },
+        { "word": "Disconnect and dance solo" }
+      ]
+    },
+    {
+      "title": "Who is that?",
+      "words": [
+        { "word": "A Swede", "emoji": "🇸🇪" },
+        { "word": "Follower taller than leader" },
+        { "word": "Somebody you have personally taken class from" }
+      ]
+    },
+    {
+      "title": "Fashion Police",
+      "words": [
+        { "word": "A hair flower", "emoji": "🌺" },
+        {
+          "word": "Braces (susp&shy;enders)",
+          "description": "straps which go over the shoulders and hold trousers up"
+        },
+        { "word": "A hat", "emoji": "👒" },
+        { "word": "A polo shirt (piketröja)", "emoji": "👕" },
+        { "word": "A knitted vest" },
+        { "word": "Metallic shoes " },
+        { "word": "Loafers", "emoji": "👞" },
+        { "word": "Patterned socks", "emoji": "🧦" },
+        {
+          "word": "Injury support",
+          "description": "eg. a knee or wrist brace, or physio tape"
+        },
+        { "word": "Both partners wearing the same colour (not black or white)" }
+      ]
+    }
+  ]
+}
