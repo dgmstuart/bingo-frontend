@@ -1,7 +1,7 @@
 .Cell {
   text-align: center;
   font-size: calc(2vw + 4px);
-  font-size: calc(1.97vw + 4px);
+  font-size: clamp(4px, calc(1.97vw + 4px), 20px);
   padding: calc(2vmin - 4px);
   border: 2px solid var(--dark);
   vertical-align: middle;

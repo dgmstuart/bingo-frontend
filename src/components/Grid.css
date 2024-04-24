@@ -13,6 +13,16 @@
   border-bottom: none;
 }
 
+@media (width >= 800px) {
+  .Grid td:first-child {
+    border-left: none;
+  }
+
+  .Grid td:last-child {
+    border-right: none;
+  }
+}
+
 .Row {
   height: 80px;
 }
