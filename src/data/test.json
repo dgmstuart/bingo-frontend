@@ -1,0 +1,103 @@
+{
+  "name": "Team Lindy [TEST]",
+  "url": "https://dgmstuart.github.io/bingo-frontend/test",
+  "videoListUrl": "https://www.youtube.com/playlist?list=PLgsIo5h4KQoYzMCvcuBFTy7-qW8VgsFpT",
+  "wordList": [
+    {
+      "title": "Things which we might include in the main list ",
+      "description": "These have potential, but it's not clear how many routines they appear in",
+      "words": [
+        {
+          "word": "An accessory falls off",
+          "description": "[Fashion police] eg. a fascinator, hat or shoe"
+        },
+        {
+          "word": "Costume change",
+          "description": "[Fashion police] a deliberate change of an item of clothing in the middle of a routine"
+        },
+        {
+          "word": "Injury support",
+          "description": "[Fashion police] eg. a knee or wrist brace, or physio tape"
+        },
+        {
+          "word": "A tattoo",
+          "description": "[Fashion police] must be visible!"
+        },
+        {
+          "word": "Hair Flower",
+          "description": "[Fashion police]"
+        },
+        {
+          "word": "The splits",
+          "description": "[Solo dance step] full splits or jazz splits"
+        },
+        {
+          "word": "Eagle slide",
+          "description": "[Solo dance step]"
+        },
+        {
+          "word": "Texas Tommy",
+          "description": "[Partnered dance step] swingout where leader puts follower in an armlock and follower spins out of it."
+        },
+        {
+          "word": "Frog Jump",
+          "description": "[Air step] from closed position, flyer jumps, assisted by the base. Flyer pulls knees up as high as possible (like a frog)"
+        },
+        {
+          "word": "Hip flip (air step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02huwBxPSC4UP7EuiaeqQUZJd1T1t6iCDsydytGwuztY9KH8CXSfDp1YRUAPj6oGrSl",
+          "description": "[Air step] flyer does a backward somersault around the leader's hip. Too hard to distinguish from knickerbocker/ round the back/ Kay flip?"
+        },
+        {
+          "word": "Balboa",
+          "description": "[Dance styles]"
+        },
+        {
+          "word": "Collegiate Shag",
+          "description": "[Dance styles]"
+        },
+        {
+          "word": "St Louis Shag",
+          "description": "[Dance styles]"
+        },
+        {
+          "word": "Peabody",
+          "description": "[Dance styles]"
+        }
+      ]
+    },
+    {
+      "title": "Things which are just too rare?",
+      "description": "It's not that interesting to have something on your card whch is quite unlikely to ever show up",
+      "words": [
+        {
+          "word": "Candlestick (air step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0Pu1ht1kXB4gtsydYocRFXkQR1WuxsQy38EcQTfVfWX4aEw4wMjrFErgzTpzAE4B3l",
+          "description": "Thrower lifts the flyer upside down above their head"
+        },
+        {
+          "word": "Shoulder toss (air step)",
+          "description": "Thrower throws the flyer back over their shoulder"
+        },
+        {
+          "word": "Horses",
+          "url": "https://youtu.be/egopcBsOPIU?si=N57PFTGxY1Y_PrgX&t=198",
+          "description": "An exit move from A Day At The Races: two dancers balance on a third dancer, who walks offstage"
+        },
+        {
+          "word": "Cross formation",
+          "description": "[Formations]"
+        },
+        {
+          "word": "Frog jump (air step)",
+          "word": "Pancake Cannon",
+          "description": "A canon of couples doing The Pancake air step"
+        },
+        {
+          "word": "Swingout Cannon",
+          "description": "A canon of couples swinging out on different beats"
+        }
+      ]
+    }
+  ]
+}
