@@ -10,11 +10,11 @@ const importJsonData = async <T>(listName: string): Promise<Result<T>> => {
       data: (await import(`../data/${listName}.json`)).default,
     };
   } catch (error) {
+    console.error("Failed to load the data", error);
     return {
       success: false,
       data: {},
     };
-    console.error("Failed to load the data", error);
   }
 };
 
