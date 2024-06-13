@@ -15,4 +15,9 @@ export type WordData = {
   url?: string;
   emoji?: string;
   description?: string;
+  cssClasses?: string[];
+};
+export type StyledWord = {
+  word: string;
+  cssClasses?: string[];
 };
