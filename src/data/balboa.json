@@ -13,6 +13,10 @@
         { "word": "Hangman" },
         { "word": "Both dancers jump" },
         {
+          "word": "Beach pushes",
+          "description": "repeatedly connect with right hand to right hand, then with left hand to left hand"
+        },
+        {
           "word": "Follower crossovers, leader doesn't cross",
           "description": "Surely there’s a proper name for this?"
         }
@@ -22,8 +26,10 @@
       "title": "Travelling moves",
       "words": [
         { "word": "Drags" },
-        { "word": "Travelling crossovers" },
-        { "word": "Grapevine" },
+        {
+          "word": "Grapevine",
+          "description": "also: \"travelling crossovers\"?"
+        },
         {
           "word": "Heel slide",
           "description": "(Usually the leader) slides in a line or a circle with the heel of their front foot"
@@ -45,7 +51,8 @@
         {
           "word": "A really big kick",
           "description": "we're talking REALLY big"
-        }
+        },
+        { "word": "Boogie drop" }
       ]
     },
     {
@@ -53,9 +60,9 @@
       "words": [
         { "word": "Hold a pose with a finger in the air", "emoji": "🕺" },
         {
-          "word": "Stop step",
+          "word": "Maxie stop",
           "emoji": "🛑",
-          "description": "(not sure if this is the right name?) both leader and follower slide feet outwards and go split weight"
+          "description": "both leader and follower slide feet outwards and go split weight"
         },
         { "word": "(That thing where you both open out)" },
         { "word": "Freeze for at least 4 counts", "emoji": "🥶" },
@@ -118,7 +125,7 @@
       "words": [
         { "word": "Linked arms", "emoji": "🔗" },
         { "word": "Elbow catch", "emoji": "💪" },
-        { "word": "Double hand hold" },
+        { "word": "sweetheart position" },
         { "word": "Disconnect and dance solo" }
       ]
     },
@@ -126,7 +133,7 @@
       "title": "Who is that?",
       "words": [
         { "word": "A Swede", "emoji": "🇸🇪" },
-        { "word": "Follower taller than leader" },
+        { "word": "Follower taller than leader", "description": "...in heels" },
         { "word": "Somebody you have personally taken class from" }
       ]
     },
