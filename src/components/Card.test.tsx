@@ -5,8 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import stripIndent from "strip-indent";
 import teamLindy from "../data/teamLindy.json";
 import flattenWordList from "../lib/flattenWordList";
+import type { StyledWord } from "../data/config";
 
-const wordList: string[] = flattenWordList(teamLindy.wordList);
+const wordList: StyledWord[] = flattenWordList(teamLindy.wordList);
 
 describe("'New card' button", () => {
   test("changes the words on the card", () => {
