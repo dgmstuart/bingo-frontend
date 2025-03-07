@@ -107,7 +107,10 @@
       "words": [
         { "word": "3 swingouts and a circle" },
         { "word": "4 or more swingouts in a row" },
-        { "word": "Swingouts in opposite directions" }
+        {
+          "word": "Swingouts in opposite directions",
+          "description": "eg. half the group swing out to the left and the rest to the right"
+        }
       ]
     },
     {
@@ -152,6 +155,7 @@
     },
     {
       "title": "Who is that?",
+      "description": "If you're not sure where someone comes from, ask your neighbour!",
       "words": [
         { "word": "Mixed-nationality team" },
         { "word": "All-Swedish Team" },
