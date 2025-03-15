@@ -7,7 +7,7 @@ import QRCode from "./components/QRCode";
 import { defaultConfigLoader, configLoader } from "./loaders/configLoaders";
 
 const App: React.FC = () => {
-  const rootPath = "/bingo-frontend";
+  const rootPath = "/";
 
   const router = createBrowserRouter([
     {
