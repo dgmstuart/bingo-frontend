@@ -180,7 +180,10 @@
         { "word": "Brightly coloured trousers" },
         { "word": "Brightly coloured safety shorts" },
         { "word": "A metallic item of clothing" },
-        { "word": "Everyone is wearing the same colour (not black or white)" },
+        {
+          "word": "All wearing the same colour (not black or white)",
+          "description": "that's including both leaders and followers"
+        },
         {
           "word": "Wardrobe malfunction",
           "description": "eg. an accessory falls off, a shirt comes untucked, a tie escapes a suit jacket etc."
