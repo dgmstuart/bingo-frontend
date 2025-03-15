@@ -53,6 +53,11 @@
           "description": "[Air step] flyer does a backward somersault around the leader's hip. Too hard to distinguish from knickerbocker/ round the back/ Kay flip?"
         },
         {
+          "word": "Down the back/ Dive (air step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02KTnaoKDWx8E7zhs1VdFXD993dghV9aQ332WsmP7exKncmQwwvmonc4zCiesXaZMQl",
+          "description": "[Air step] base ducks, flyer dives over their back and ends up parallel to the floor between the base's legs. Too similar to \"waterfall\"?"
+        },
+        {
           "word": "Balboa",
           "description": "[Dance styles]"
         },
@@ -67,6 +72,16 @@
         {
           "word": "Peabody",
           "description": "[Dance styles]"
+        }
+      ]
+    },
+    {
+      "title": "Things which are too ambiguous?",
+      "description": "It's not great if it's quite unclear if something has happened or not",
+      "words": [
+        {
+          "word": "Echoing the spotlight",
+          "description": "One or more people are in the spotlight (eg. in a jam circle) and the people not dancing there imitate some of their movement - eg jumping when they jump or spinning when they spin. Problematic: this often happens as a way for the rest of the group to sync up with the spotlight dancers, which is ambiguous."
         }
       ]
     },
