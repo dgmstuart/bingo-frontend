@@ -5,9 +5,21 @@ An application for running a bingo game.
 Inspired by [osric.com/bingo-card-generator](https://osric.com/bingo-card-generator/)
 ([github](https://github.com/cherdt/BingoCardGenerator)).
 
-Words are randomly selected from the list defined in [wordList.json](src/wordList.json)
-
 This is a React application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Games
+
+There are several different lists of words that can be used to play Bingo.
+The default game is Team Lindy Bingo, where players watch videos of team Lindy Hop routines together.
+
+Configuration is with JSON files, and the words on the cards are randomly chosen from the list defined in the chosen configuration:
+
+  - [teamLindy.json](src/data/teamLindy.json) ([default](https://teamlindybingo.com/)) - Things that happen in Team Lindy Hop routines
+  - [test.json](src/data/test.json) ([/test](https://teamlindybingo.com/test)) - Candidates for addition to the main Team Lindy list
+  - [balboa.json](src/data/balboa.json) ([/balboa](https://teamlindybingo.com/balboa)) - Things that happen in Balboa performances (WIP)
+  - [numbers.json](src/data/numbers.json) ([/numbers](https://teamlindybingo.com/numbers)) - A classic 90-number bingo game
+
+Submissions of new word lists are welcomed!
 
 ## Available Scripts
 
