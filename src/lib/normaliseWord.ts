@@ -7,4 +7,9 @@ const normaliseWord = (string: string): string =>
     .replace(new RegExp(htmlSoftHyphen, "g"), unicodeSoftHyphen)
     .replace(new RegExp(htmlNonBreakingSpace, "g"), unicodeNonBreakingSpace);
 
+export const formatWord = (string: string): string =>
+  string
+    .replace(new RegExp(htmlSoftHyphen, "g"), "")
+    .replace(new RegExp(htmlNonBreakingSpace, "g"), " ");
+
 export default normaliseWord;

@@ -1,5 +1,5 @@
 import useSession from "../hooks/useSession";
-import shuffle from "../lib/shuffle";
+import shuffle, { ArrayTransformation } from "../lib/shuffle";
 import type { CellData, CellClickHandler } from "../components/Cell";
 import type { ButtonClickHandler } from "../clickHandler";
 
@@ -10,8 +10,22 @@ type GetterSetters = [
   ButtonClickHandler,
 ];
 
-const useCard = (id: string, wordList: string[]): GetterSetters => {
-  const newWords = (): string[] => shuffle(wordList).slice(0, 25);
+const useCard = (
+  id: string,
+  wordList: string[],
+  randomise: boolean,
+): GetterSetters => {
+  const newWords = (): string[] => orderer()(wordList).slice(0, 25);
+
+  const orderer = (): ArrayTransformation => {
+    if (randomise) {
+      return shuffle;
+    } else {
+      return nullOrderer;
+    }
+  };
+
+  const nullOrderer: ArrayTransformation = (array) => array;
 
   const newCellDataList = function (): CellData[] {
     return newWords().map((word) => {

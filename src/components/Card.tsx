@@ -5,7 +5,8 @@ import Grid from "./Grid";
 import MainLayout from "../layouts/MainLayout";
 import emojiGrid from "../lib/emojiGrid";
 import share from "../lib/share";
-import type { CellProps } from "./Cell";
+import { formatWord } from "../lib/normaliseWord";
+import type { CellProps, CellData } from "./Cell";
 import type { ButtonClickHandler } from "../clickHandler";
 
 const Card: React.FC<{
@@ -13,11 +14,13 @@ const Card: React.FC<{
   name?: string;
   url: string;
   wordList: string[];
+  randomise?: boolean;
   videoListUrl?: string;
-}> = ({ id, name, url, wordList, videoListUrl }) => {
+}> = ({ id, name, url, wordList, randomise = true, videoListUrl }) => {
   const [cellDataList, toggleStamped, setNewWords, clearAllCells] = useCard(
     id,
     wordList,
+    randomise,
   );
 
   const cellPropsList: CellProps[] = cellDataList.map((cellData, index) => ({
@@ -26,13 +29,25 @@ const Card: React.FC<{
   }));
 
   const shareCard: ButtonClickHandler = () => {
-    const message = emojiGrid(cellDataList);
+    const wordBullets = remainingWords(cellDataList).map((word) => `- ${word}`);
+    const message = [
+      emojiGrid(cellDataList),
+      "Remaining:",
+      ...wordBullets,
+    ].join("\n");
     share({
       title: `${name} Bingo`,
       text: message,
       url: url,
     });
   };
+
+  const remainingWords = (cellDataList: CellData[]): string[] =>
+    cellDataList
+      .filter((cellData) => !cellData.stamped)
+      .map((cellData) => cellData.word)
+      .map(formatWord)
+      .sort();
 
   const headerContent = (
     <CardActions
