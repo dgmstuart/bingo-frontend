@@ -102,7 +102,7 @@ describe("'Share' button", () => {
       <BrowserRouter>
         <Card
           wordList={coordinates}
-          name={""}
+          name={"Team Lindy"}
           url={""}
           id={""}
           randomise={false}
@@ -129,6 +129,7 @@ describe("'Share' button", () => {
     await user.paste();
 
     const message = `
+      Team Lindy Bingo
       🟦⬜⬜⬜⬜
       ⬜⬜⬜⬜⬜
       ⬜⬜⬜⬜⬜

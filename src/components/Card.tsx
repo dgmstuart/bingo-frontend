@@ -29,14 +29,16 @@ const Card: React.FC<{
   }));
 
   const shareCard: ButtonClickHandler = () => {
+    const gameName = `${name} Bingo`;
     const wordBullets = remainingWords(cellDataList).map((word) => `- ${word}`);
     const message = [
+      gameName,
       emojiGrid(cellDataList),
       "Remaining:",
       ...wordBullets,
     ].join("\n");
     share({
-      title: `${name} Bingo`,
+      title: gameName,
       text: message,
       url: url,
     });
