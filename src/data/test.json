@@ -44,23 +44,18 @@
           "description": "[Partnered dance step] swingout where leader puts follower in an armlock and follower spins out of it."
         },
         {
-          "word": "Frog Jump",
+          "word": "Frog Jump (air&nbsp;step)",
           "description": "[Air step] from closed position, flyer jumps, assisted by the thrower. Flyer pulls knees up as high as possible (like a frog)"
         },
         {
-          "word": "Hip flip (air step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02huwBxPSC4UP7EuiaeqQUZJd1T1t6iCDsydytGwuztY9KH8CXSfDp1YRUAPj6oGrSl",
-          "description": "[Air step] flyer does a backward somersault around the leader's hip. Too hard to distinguish from knickerbocker/ round the back/ Kay flip?"
-        },
-        {
-          "word": "Down the back/ Dive (air step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02KTnaoKDWx8E7zhs1VdFXD993dghV9aQ332WsmP7exKncmQwwvmonc4zCiesXaZMQl",
-          "description": "[Air step] thrower ducks, flyer dives over their back and ends up parallel to the floor between the thrower's legs. Too similar to \"waterfall\"?"
-        },
-        {
-          "word": "Over the back (air step)",
+          "word": "Over the back (air&nbsp;step)",
           "url": "https://swungover.wordpress.com/2023/03/02/classic-air-steps-over-the-back",
           "description": "[Air step] the first air step: thrower and flyer are back to back and link both arms, thrower leans forwards and flips the flyer over their head, ending up face-to-face"
+        },
+        {
+          "word": "Baby doll/ Rag doll (air&nbsp;step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02eB1VUAaPWprnZUmd5723ddDrmK5J9wGRQkJox8vTrYL95r3VpK59fTnVqFBTp2FUl",
+          "description": "[Air step] AKA \"Baby drop\" flyer has their back to the thrower and is dropped down, legs splaying out, caught under their armpits"
         },
         {
           "word": "Balboa",
@@ -77,6 +72,24 @@
         {
           "word": "Peabody",
           "description": "[Dance styles]"
+        },
+        {
+          "word": "Somebody gets dragged along the ground",
+          "description": "[Group work]"
+        }
+      ]
+    },
+    {
+      "title": "Things which are too similar to other things?",
+      "words": [
+        {
+          "word": "Hip flip (air&nbsp;step)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid02huwBxPSC4UP7EuiaeqQUZJd1T1t6iCDsydytGwuztY9KH8CXSfDp1YRUAPj6oGrSl",
+          "description": "[Air step] flyer does a backward somersault around the leader's hip. Too hard to distinguish from knickerbocker/ round the back/ Kay flip?"
+        },
+        {
+          "word": "One dancer 'conducts' the others",
+          "description": "[Group work] too similar to mime/acting?"
         }
       ]
     },
@@ -95,13 +108,9 @@
       "description": "It's not that interesting to have something on your card whch is quite unlikely to ever show up",
       "words": [
         {
-          "word": "Candlestick (air step)",
-          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid0Pu1ht1kXB4gtsydYocRFXkQR1WuxsQy38EcQTfVfWX4aEw4wMjrFErgzTpzAE4B3l",
-          "description": "thrower lifts the flyer upside down above their head"
-        },
-        {
-          "word": "Shoulder toss (air step)",
-          "description": "thrower throws the flyer back over their shoulder"
+          "word": "Over the shoulder (air&nbsp;step)",
+          "description": "AKA basket toss: flyer has their back to thrower, who throws them back over their shoulder (not to be confused with Sack of Potatoes where they start facing each other)",
+          "url": "https://www.facebook.com/robertwhiteiii/posts/pfbid025SpyWMtVgkCNQ46wkX7ndukZYHePRcMMDtb2BNe2tCK9Dv58nVoPpFFn8yEMpahyl"
         },
         {
           "word": "Horses",
@@ -113,9 +122,8 @@
           "description": "[Formations]"
         },
         {
-          "word": "Frog jump (air step)",
           "word": "Pancake Cannon",
-          "description": "a canon of couples doing The Pancake air step"
+          "description": "a canon of couples doing The Pancake air&nbsp;step"
         },
         {
           "word": "Swingout Cannon",
